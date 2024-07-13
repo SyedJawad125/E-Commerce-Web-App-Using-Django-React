@@ -9,11 +9,10 @@ from rest_framework.response import Response
 from django.db.models import Sum, Count, Avg, F
 from utils.helper import create_response, paginate_data
 from utils.response_messages import *
+from datetime import date, timedelta
 # from vehicle.serializer import serializer
-
 # from e_commerce.settings import EMAIL_HOST_USER
 # from django.core.mail import send_mail
-from datetime import date, timedelta
 
 
 
