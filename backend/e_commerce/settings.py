@@ -31,6 +31,8 @@ SECRET_KEY = 'django-insecure-tbxp050r_36wcpo4re87tc)_-^k9qy(jpo6j_=5e)5mh2gu6zz
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
+ALLOWED_HOSTS = ['*', 'localhost:3000', 'http://localhost:3000']
+
 ALLOWED_HOSTS = []
 
 
@@ -43,6 +45,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    "corsheaders",
     'user_auth',
     'permissions',
     'my_ecommerce',
@@ -51,12 +54,17 @@ INSTALLED_APPS = [
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
+    "corsheaders.middleware.CorsMiddleware",
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
+
+CORS_ALLOWED_ORIGINS = [
+    "http://localhost:3000",
+] 
 
 ROOT_URLCONF = 'e_commerce.urls'
 
