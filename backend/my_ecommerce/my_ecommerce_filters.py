@@ -16,6 +16,16 @@ class ProductFilter(FilterSet):
         model = Product
         fields ='__all__'
 
+class CategoryFilter(FilterSet):
+    id = CharFilter(field_name='id')
+    date_from = DateFilter(field_name='created_at', lookup_expr='gte' )
+    date_to = DateFilter(field_name='created_at', lookup_expr='lte' )
+    name = CharFilter(field_name='name', lookup_expr='icontains')
+
+    class Meta:
+        model = Category
+        fields ='__all__'
+
 
 class OrderFilter(FilterSet):
     id = CharFilter(field_name='id')
