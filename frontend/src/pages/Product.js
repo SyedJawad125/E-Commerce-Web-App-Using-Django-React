@@ -35,7 +35,7 @@ const Product = () => {
           }
 
         const receiveData = async () =>{
-            const res = await axiosInstance.get('/courier/product')
+            const res = await axiosInstance.get('/ecommerce/product')
             try{
                 if (res){
                     setRecords(res.data.data.data)
@@ -52,7 +52,7 @@ const Product = () => {
 
     const deleteRecord = async (id) => {
     try{
-        const res = await axiosInstance.delete(`/courier/product?id=${id}`)
+        const res = await axiosInstance.delete(`/ecommerce/product?id=${id}`)
         if(res){
             console.log('Delete Successfully')
             setFlag(true)
@@ -68,29 +68,6 @@ const Product = () => {
 }
 
 
-
-const handleInputChange = (event) => {
-    setSearchTerm(event.target.value);
-
-    // Clear any previous timeout
-    clearTimeout(debounceTimeout.current);
-
-    // Set a new timeout for 1 second
-    debounceTimeout.current = setTimeout(() => {
-      setIsLoading(true); // Set loading state to true
-      fetch(`/courier/product?name=${search}`) // Replace with your actual API endpoint
-        .then((response) => response.json())
-        .then((data) => {
-          setSearchResults(data.results || []); // Handle potential data structure variations
-          setIsLoading(false); // Set loading state to false after successful fetch
-        })
-        .catch((error) => {
-          console.error('Error fetching data:', error);
-          setIsLoading(false); // Set loading state to false after error
-        });
-    }, 1000);
-  };
-
   // Clear timeout on unmount to prevent memory leaks
   useEffect(() => {
     return () => clearTimeout(debounceTimeout.current);
@@ -102,7 +79,7 @@ const handleInputChange = (event) => {
 
     <Link type="submit" class="btn btn-primary mt-3" to='/Add/Addproduct'>Add Product</Link>
 
-    <input
+    {/* <input
         type="text"
         value={searchTerm}
         onChange={handleInputChange}
@@ -115,7 +92,7 @@ const handleInputChange = (event) => {
             <li key={result.id}>{result.name || result.title || result}</li>
           ))}
         </ul>
-      )}
+      )} */}
     {/* <button class='btn-primary' type='submit' onClick={handleSearch}>Search</button> */}
     
     <br/><br/>
