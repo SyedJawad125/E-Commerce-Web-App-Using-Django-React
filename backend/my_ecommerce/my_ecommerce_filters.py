@@ -14,7 +14,9 @@ class ProductFilter(FilterSet):
 
     class Meta:
         model = Product
-        fields ='__all__'
+        # fields ='__all__'
+        exclude = ['image']
+
 
 class CategoryFilter(FilterSet):
     id = CharFilter(field_name='id')
