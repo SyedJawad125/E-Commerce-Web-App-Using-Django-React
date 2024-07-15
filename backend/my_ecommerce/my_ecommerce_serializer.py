@@ -12,6 +12,7 @@ class ProductSerializer(ModelSerializer):
         data = super().to_representation(instance)
         data['created_by'] = UserListingSerializer(instance.created_by).data if instance.created_by else None
         data['updated_by'] = UserListingSerializer(instance.updated_by).data if instance.updated_by else None
+        data['category_name'] = instance.prod_has_category.name if instance.prod_has_category else None
         return data
 
 class CategorySerializer(ModelSerializer):

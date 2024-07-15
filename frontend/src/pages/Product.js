@@ -104,15 +104,22 @@ const Product = () => {
         { records ? 
         records.map(item => (
             <div class="card" style={{width: "18rem"}}>
+                    <img src={`http://localhost:8000/${item.image}`} alt="Jane" style={ {width: '70%'} } />
+
             <div class="card-body">
-                <h5 class="card-title">{item.name}</h5>
-                <h5 class="card-title">{item.description}</h5>
-                <h5 class="card-title">{item.price}</h5>
+                <h5 class="card-title">Name :{item.name}</h5>
+                <h5 class="card-title">Des :{item.description}</h5>
+                <h5 class="card-title">Price :{item.price}</h5>
+                <h5 class="card-title">Category :{item.category_name}</h5>
                 {/* <h5 class="card-context">{item.created_by_name}</h5> */}
                 <button class='btn btn-danger'onClick={()=> deleteRecord(item.id)}>Delete</button>
                 <button class='btn btn-primary mx-2' onClick={()=> updateRecord(item)}>Update</button>
             </div>
             </div>
+//         data['menu_name'] = instance.menu.name
+//         data['restaurant_name'] = instance.restaurant.name if instance.restaurant else None
+//         data['order_bill'] = OrderSerializerList(instance.order).data if instance.order else None
+
 
 )) : 
 <p>Loading....</p>
