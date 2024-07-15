@@ -6,6 +6,7 @@ import Services from './pages/Services';
 import About from './pages/About';
 import Product from './pages/Product';
 import Addproduct from './pages/Addproduct';
+import Updateproduct from './pages/Updateproduct';
 import Category from './pages/Category';
 import Addcategory from './pages/Addcategory';
 import Updatecategory from './pages/Updatecategory';
@@ -29,6 +30,7 @@ function App() {
             <Route path='/about' element={<About/>}  />
             <Route path='/product' element={<Product/>}  />
             <Route path='/Add/Addproduct' element={<Addproduct/>}  />
+            <Route path='/Update/Updateproduct' element={<Updateproduct/>}  />
             <Route path='/category' element={<Category/>}  />
             <Route path='/Add/Addcategory' element={<Addcategory/>}  />
             <Route path='/Update/Updatecategory' element={<Updatecategory/>}  />
