@@ -64,7 +64,7 @@ const Updateproduct = () => {
     };
 
   return (
-    <div class='container' style={{ marginLeft: '200px' }}>
+    <div class='container' >
         <h2 class='mt-4'>Add Product Here :</h2>
       <form class='mt-3' onSubmit={handleSubmit}>
         <div class="mb-3">

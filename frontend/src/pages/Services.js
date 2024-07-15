@@ -7,7 +7,7 @@ import '../App.css'
 
 const Services = () => {
   return (
-    <div class='container' style={{ marginLeft: '200px' }}  >
+    <div class='container'  >
                 
       <div class="about-section">
           <h1>Our Services</h1>

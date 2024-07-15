@@ -48,7 +48,7 @@ const Login = () => {
     }
 
   return (
-    <div class="container" style={{ marginLeft: '200px' }}>
+    <div class="container" >
     <div class="row justify-content-center">
         <div class="col-md-5">
             <div class="card mt-5">

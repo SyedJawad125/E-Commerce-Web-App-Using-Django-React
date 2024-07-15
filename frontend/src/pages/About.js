@@ -6,7 +6,7 @@ import '../App.css'
 
 const About = () => {
   return (
-    <div class='container' style={{ marginLeft: '200px' }}  >
+    <div class='container'  >
                 
         <div class="about-section">
             <h1>About Us Page</h1>

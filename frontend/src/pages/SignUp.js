@@ -42,7 +42,7 @@ const SignUp = () => {
 
   return (
     <div class="px-4 py-5 px-md-3 text-center text-lg-start" style={{backgroundColor: "hsl(0, 0%, 96%)" }}>
-    <div class="container" style={{ marginLeft: '200px' }}>
+    <div class="container" >
       <div class="row gx-lg-5 align-items-center" onSubmit={handleSubmit}>
         <div class="col-lg-6 mb-5 mb-lg-0 " >
           <h3 class="my-7 display-5 fw-bold ls-tight" style={{ margin: '40px' }}>
