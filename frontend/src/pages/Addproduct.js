@@ -5,7 +5,7 @@ import axiosInstance from '../context/AxiosInstance'
 
 const Addproduct = () => {
 
-    const navigate = useNavigate()
+  const navigate = useNavigate()
 
   const [name, setname] = useState('')
   const [description, setdescription] = useState('')
@@ -62,7 +62,7 @@ const Addproduct = () => {
     };
   return (
     <div class='container' style={{ marginLeft: '200px' }}>
-        <h2 class='mt-4'>Add MenuItem Here :</h2>
+        <h2 class='mt-4'>Add Product Here :</h2>
       <form class='mt-3' onSubmit={handleSubmit}>
         <div class="mb-3">
           <label for="name" class="form-label">Name</label>

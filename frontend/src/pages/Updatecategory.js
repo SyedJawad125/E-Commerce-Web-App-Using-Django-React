@@ -37,7 +37,7 @@ const Updatecategory = () => {
     };
   return (
     <div class='container' style={{ marginLeft: '200px' }}>
-    <h2 class='mt-4'>Add Category Here :</h2>
+    <h2 class='mt-4'>Update Category Here :</h2>
   <form class='mt-3' onSubmit={handleSubmit}>
     <div class="mb-3">
       <label for="name" class="form-label">Name</label>
