@@ -79,52 +79,38 @@ const Product = () => {
 
     <Link type="submit" class="btn btn-primary mt-3" to='/Add/Addproduct'>Add Product</Link>
 
-    {/* <input
-        type="text"
-        value={searchTerm}
-        onChange={handleInputChange}
-        placeholder="Search..."
-      />
-      {isLoading && <p>Loading...</p>}
-      {searchResults.length > 0 && (
-        <ul>
-          {searchResults.map((result) => (
-            <li key={result.id}>{result.name || result.title || result}</li>
-          ))}
-        </ul>
-      )} */}
-    {/* <button class='btn-primary' type='submit' onClick={handleSearch}>Search</button> */}
-    
     <br/><br/>
 
     {data ? <p>Total: {data.count}</p> : <p>Total: 0</p>}
 
-    <div class="row">
+    <div class="container mt-5">
+      <div class="row">
         
         { records ? 
         records.map(item => (
-            <div class="card" style={{width: "18rem"}}>
-                    <img src={`http://localhost:8000/${item.image}`} alt="Jane" style={ {width: '70%'} } />
+        <div class="col-lg-3 col-md-6 mb-4">
 
+            <div class="card" >
+                    <img src={`http://localhost:8000/${item.image}`}  class="card-img-top" alt="Jane"  />
+                   
+                     
             <div class="card-body">
                 <h5 class="card-title">Name :{item.name}</h5>
                 <h5 class="card-title">Des :{item.description}</h5>
                 <h5 class="card-title">Price :{item.price}</h5>
                 <h5 class="card-title">Category :{item.category_name}</h5>
-                {/* <h5 class="card-context">{item.created_by_name}</h5> */}
                 <button class='btn btn-danger'onClick={()=> deleteRecord(item.id)}>Delete</button>
                 <button class='btn btn-primary mx-2' onClick={()=> updateRecord(item)}>Update</button>
             </div>
             </div>
-//         data['menu_name'] = instance.menu.name
-//         data['restaurant_name'] = instance.restaurant.name if instance.restaurant else None
-//         data['order_bill'] = OrderSerializerList(instance.order).data if instance.order else None
-
-
+            </div>  
+            
 )) : 
 <p>Loading....</p>
 }
+    </div> 
     </div>  
+     
     <ToastContainer/>
 </div>
   )

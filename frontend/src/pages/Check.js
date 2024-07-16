@@ -14,9 +14,10 @@ const Check = () => {
           {/* <img src="https://via.placeholder.com/150" class="card-img-top" alt="Image 1" /> */}
           <div class="card-body">
             <h5 class="card-title">Card title 1</h5>
+            <h5 class="card-text">Name :Name</h5>
             <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            <a href="#" class="btn btn-primary btn-custom">Button 1</a>
-            <a href="#" class="btn btn-secondary btn-custom">Button 2</a>
+            <a href="#" class="btn btn-primary mt-3">Button 1</a>
+            <a href="#" class="btn btn-secondary mt-3 ml-4" style={{ marginLeft: '10px' }}>Button 2</a>
           </div>
         </div>
       </div>
@@ -26,8 +27,8 @@ const Check = () => {
           <div class="card-body">
             <h5 class="card-title">Card title 2</h5>
             <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            <a href="#" class="btn btn-primary btn-custom">Button 1</a>
-            <a href="#" class="btn btn-secondary btn-custom">Button 2</a>
+            <a href="#" class="btn btn-primary mt-3">Button 1</a>
+            <a href="#" class="btn btn-secondary mt-3 ml-4" style={{ marginLeft: '10px' }}>Button 2</a>
           </div>
         </div>
       </div>
@@ -37,8 +38,8 @@ const Check = () => {
           <div class="card-body">
             <h5 class="card-title">Card title 3</h5>
             <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            <a href="#" class="btn btn-primary btn-custom">Button 1</a>
-            <a href="#" class="btn btn-secondary btn-custom">Button 2</a>
+            <a href="#" class="btn btn-primary mt-3">Button 1</a>
+            <a href="#" class="btn btn-secondary mt-3 ml-4" style={{ marginLeft: '10px' }}>Button 2</a>
           </div>
         </div>
       </div>
@@ -49,7 +50,7 @@ const Check = () => {
             <h5 class="card-title">Card title 4</h5>
             <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
             <a href="#" class="btn btn-primary mt-3">Button 1</a>
-            <a href="#" class="btn btn-secondary mt-3">Button 2</a>
+            <a href="#" class="btn btn-secondary mt-3 ml-4" style={{ marginLeft: '10px' }}>Button 2</a>
           </div>
         </div>
       </div>
