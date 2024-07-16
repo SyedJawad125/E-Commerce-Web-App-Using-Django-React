@@ -15,6 +15,7 @@ import Login from './pages/Login';
 import Contact from './pages/Contact';
 import {Routes, Route} from 'react-router-dom'
 import ProtectedRoute from './context/ProtectedRoute'
+import Publicproduct from './pages/Publicproduct';
 import Check from './pages/Check';
 
 
@@ -33,10 +34,12 @@ function App() {
             <Route path='/product' element={<Product/>}  />
             <Route path='/Add/Addproduct' element={<Addproduct/>}  />
             <Route path='/Update/Updateproduct' element={<Updateproduct/>}  />
+            <Route path='/publicproduct' element={<Publicproduct/>}  />
             <Route path='/category' element={<Category/>}  />
             <Route path='/Add/Addcategory' element={<Addcategory/>}  />
             <Route path='/Update/Updatecategory' element={<Updatecategory/>}  />
             <Route path='/check' element={<Check/>}  />
+
 
             
 

@@ -384,7 +384,7 @@ button{
 }
 
 
-/* Css of Code.js */
+/* Css of Publicproduct.js for cards */
 
 .card {
   border-radius: 15px;
@@ -399,4 +399,31 @@ button{
 }
 .btn-custom {
   border-radius: 50px;
+}
+
+
+/* CSS for Check.js */
+
+.card-title-custom {
+  font-family: 'Arial', sans-serif;
+  font-weight: bold;
+  color: #007bff;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.card-text-custom {
+  font-family: 'Georgia', serif;
+  font-size: 1rem;
+  color: #333;
+  line-height: 1.6;
+  text-align: justify;
+}
+
+.card {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s;
+}
+
+.card:hover {
+  transform: scale(1.05);
 }

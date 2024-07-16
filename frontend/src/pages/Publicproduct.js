@@ -5,7 +5,7 @@ import 'react-toastify/dist/ReactToastify.css';
 import axiosInstance from '../context/AxiosInstance';
 import '../App.css'
 
-const Product = () => {
+const Publicproduct = () => {
 
     const navigate = useNavigate()
     const location = useLocation()
@@ -72,29 +72,21 @@ const Product = () => {
   useEffect(() => {
     return () => clearTimeout(debounceTimeout.current);
   }, []);
-
   return (
     <div class='container' >
-    <h2 class='mt-4'>List Of Products </h2>
-
-    <Link type="submit" class="btn btn-primary mt-3" to='/Add/Addproduct'>Add Product</Link>
-
-    <br/><br/>
-
-    {data ? <p>Total: {data.count}</p> : <p>Total: 0</p>}
+    
 
    
+
     <div class="container mt-5">
       <div class="row">
         
         { records ? 
         records.map(item => (
         <div class="col-lg-3 col-md-6 mb-1">
-         
 
-            {/* <div class="card" > */}
-            <div className="card card-no-round" style={{ borderRadius: '0' }}>
-                    <img src={`http://localhost:8000/${item.image}`}  class="card-img-top" style={{ borderRadius: '0' }}/>
+            <div class="card" >
+                    <img src={`http://localhost:8000/${item.image}`}  class="card-img-top" alt="Jane"  />
                    
                      
             <div class="card-body">
@@ -102,23 +94,19 @@ const Product = () => {
                 <span><h5 class="card-text">Des :{item.description}</h5></span>
                 <span><h5 class="card-text">Price :{item.price}</h5></span>
                 <h5 class="card-text">Category :{item.category_name}</h5>
-                <button class='btn btn-danger'onClick={()=> deleteRecord(item.id)}>Delete</button>
-                <button class='btn btn-primary mx-2' onClick={()=> updateRecord(item)}>Update</button>
             </div>
             </div>
         </div>  
-          
-
             
 )) : 
 <p>Loading....</p>
 }
     </div> 
     </div>  
-    
      
     <ToastContainer/>
 </div>
   )
 }
-export default Product
+
+export default Publicproduct
