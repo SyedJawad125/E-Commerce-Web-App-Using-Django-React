@@ -17,6 +17,8 @@ const Navbar = () => {
         <Link to="/services">Services</Link>
         <Link to="/category">Categories</Link>
         <Link to="/product">Products</Link>
+        <Link to="/check">Checks</Link>
+
         <Link to="/contact">Contact</Link>
         {
                 localStorage.getItem('token') ? <Link onClick={logout}>Logout</Link> : <Link to="/login">Login</Link>

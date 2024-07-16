@@ -382,3 +382,21 @@ button{
   display: block;
   text-align: center;
 }
+
+
+/* Css of Code.js */
+
+.card {
+  border-radius: 15px;
+  overflow: hidden;
+}
+.card-img-top {
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+.card-body {
+  text-align: center;
+}
+.btn-custom {
+  border-radius: 50px;
+}
