@@ -93,6 +93,24 @@ const Check = () => {
         </div>
       </div>
       </div>
+      <div class="column">
+        <div className="card">
+        <img src={Pents} alt="Jane" className="card-image" />
+        <div className="card-content">
+          <h3>Okkkk</h3>
+          <p>AAAAAAAAAAAAAAAAAAA</p>
+        </div>
+      </div>
+      </div>
+      <div class="column">
+        <div className="card">
+        <img src={Pents} alt="Jane" className="card-image" />
+        <div className="card-content">
+          <h3>Okkkk</h3>
+          <p>AAAAAAAAAAAAAAAAAAA</p>
+        </div>
+      </div>
+      </div>
       </div>
 
       
