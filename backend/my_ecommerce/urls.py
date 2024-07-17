@@ -1,5 +1,5 @@
 from django.urls import path
-from .views import CategoryViews, ProductViews, OrderViews
+from .views import CategoryViews, ContactViews, ProductViews, OrderViews
 
 urlpatterns = [
     
@@ -15,4 +15,9 @@ urlpatterns = [
                                                 "post": "post_order",
                                                 "patch": "update_order",
                                                 "delete": "delete_order"})),
+                                                
+    path('contact', ContactViews.as_view({"get": "get_contact",
+                                                "post": "post_contact",
+                                                "patch": "update_contact",
+                                                "delete": "delete_contact"})),
 ]

@@ -5,13 +5,15 @@ from rest_framework.viewsets import ModelViewSet
 from rest_framework.response import Response
 #from .blog_serializer import BlogSerializer
 from utils.base_authentication import JWTAuthentication
-from .my_ecommerce_controller import CategoryController, ProductController, OrderController
+from .my_ecommerce_controller import CategoryController, ContactController, ProductController, OrderController
 # from rest_framework.permissions import IsAdminUser
 # Create your views here.
 
 product_controller = ProductController()
 category_controller = CategoryController()
 order_controller = OrderController()
+contact_controller = ContactController()
+
 
 class ProductViews(ModelViewSet):
     authentication_classes = [JWTAuthentication]
@@ -59,3 +61,19 @@ class OrderViews(ModelViewSet):
     def delete_order(self, request):
         return order_controller.delete_order(request)
     
+
+
+class ContactViews(ModelViewSet):
+    authentication_classes = [JWTAuthentication]
+
+    def post_contact(self, request):
+        return contact_controller.create(request)
+
+    def get_contact(self, request):
+        return contact_controller.get_contact(request)
+
+    def update_contact(self, request):
+        return contact_controller.update_contact(request)
+
+    def delete_contact(self, request):
+        return contact_controller.delete_contact(request)
