@@ -87,8 +87,8 @@ const Category = () => {
         <div class="col-lg-3 col-md-6 mb-1">
             <div class="card" >
             <div class="card-body">
-                <h5 class="card-title">Name :{item.name}</h5>
-                <h5 class="card-title">Des :{item.description}</h5>
+                <h5 class="card-title card-title-custom">{item.name}</h5>
+                <h5 class="card-text card-text-custom">Des :{item.description}</h5>
                 {/* <h5 class="card-context">{item.created_by_name}</h5> */}
                 <button class='btn btn-danger'onClick={()=> deleteRecord(item.id)}>Delete</button>
                 <button class='btn btn-primary mx-2' onClick={()=> updateRecord(item)}>Update</button>
