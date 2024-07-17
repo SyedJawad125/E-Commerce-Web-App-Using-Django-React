@@ -92,16 +92,16 @@ const Product = () => {
         <div class="col-lg-3 col-md-6 mb-1">
          
 
-            {/* <div class="card" > */}
-            <div className="card card-no-round" style={{ borderRadius: '0' }}>
-                    <img src={`http://localhost:8000/${item.image}`}  class="card-img-top" style={{ borderRadius: '0' }}/>
+            
+            <div className="card" >
+                    <img src={`http://localhost:8000/${item.image}`}  class="card-image" />
                    
                      
             <div class="card-body">
-                <span><h5 class="card-text">Name :{item.name}</h5></span>
-                <span><h5 class="card-text">Des :{item.description}</h5></span>
-                <span><h5 class="card-text">Price :{item.price}</h5></span>
-                <h5 class="card-text">Category :{item.category_name}</h5>
+                <span><h5 class="card-title card-title-custom">Name :{item.name}</h5></span>
+                <span><h5 class="card-text card-text-custom">Des :{item.description}</h5></span>
+                <span><h5 class="card-text card-text-custom">Price :{item.price}</h5></span>
+                <h5 class="card-text card-text-custom">Category :{item.category_name}</h5>
                 <button class='btn btn-danger'onClick={()=> deleteRecord(item.id)}>Delete</button>
                 <button class='btn btn-primary mx-2' onClick={()=> updateRecord(item)}>Update</button>
             </div>
@@ -122,3 +122,8 @@ const Product = () => {
   )
 }
 export default Product
+
+
+// For No Round Border Of Card
+{/* <div className="card card-no-round" style={{ borderRadius: '0' }}>
+<img src={`http://localhost:8000/${item.image}`}  class="card-img-top" style={{ borderRadius: '0' }}/> */}

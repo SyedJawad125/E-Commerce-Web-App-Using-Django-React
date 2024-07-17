@@ -1,10 +1,10 @@
 import {React, useContext} from 'react'
 import {Link} from 'react-router-dom'
-import { AuthCon } from '../context/AuthContext'
+// import { AuthCon } from '../context/AuthContext'
 import '../App.css'
 
 const Navbar = () => {
-  const {logout} = useContext(AuthCon)
+  // const {logout} = useContext(AuthCon)
   return (
     
     <nav className="navbar">
@@ -22,9 +22,9 @@ const Navbar = () => {
 
 
         <Link to="/contact">Contact</Link>
-        {
+        {/* {
                 localStorage.getItem('token') ? <Link onClick={logout}>Logout</Link> : <Link to="/login">Login</Link>
-            }
+            } */}
         {/* <div className="dropdown">
           <button className="dropbtn">Dropdown</button>
           <div className="dropdown-content">
