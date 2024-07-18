@@ -496,3 +496,26 @@ body {
   border: none;
   cursor: pointer;
 }
+
+/* Top Bar CSS */
+/* src/components/TopBar.css */
+
+.top-bar {
+  background-color: #007bff;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+}
+.left-content {
+  /* Optional styling for the left content */
+}
+
+.right-side {
+  float: right;
+  margin-right: 80px;
+  justify-content: space-between;
+  /* Other styles for the right-side content */
+}

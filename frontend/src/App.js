@@ -1,6 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
 import Navbar from './components/Navbar';
+import Topbar from './pages/Topbar';
 import Home from './pages/Home';
 import Services from './pages/Services';
 import About from './pages/About';
@@ -29,7 +30,12 @@ function App() {
       </Routes>
 
       {/* {localStorage.getItem('token') ? <Navbar/> : <p></p>} */}
+      <Topbar />
       <Navbar/>
+      {/* <div className="container">
+        <h1>Welcome to My Website</h1>
+        <p>This is a sample page with a top bar above the navbar.</p>
+      </div> */}
       <Routes>
             <Route path='/' element={<Home/>}  />
             <Route path='/services' element={<Services/>}  />
