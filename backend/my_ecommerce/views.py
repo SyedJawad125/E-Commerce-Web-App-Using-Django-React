@@ -64,7 +64,7 @@ class OrderViews(ModelViewSet):
 
 
 class ContactViews(ModelViewSet):
-    authentication_classes = [JWTAuthentication]
+    # authentication_classes = [JWTAuthentication]
 
     def post_contact(self, request):
         return contact_controller.create(request)

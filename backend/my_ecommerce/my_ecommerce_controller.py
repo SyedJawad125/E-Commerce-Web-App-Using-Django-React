@@ -338,9 +338,9 @@ class ContactController:
  
     def create(self, request):
         try:
-            request.POST._mutable = True
-            request.data["created_by"] = request.user.guid
-            request.POST._mutable = False
+            # request.POST._mutable = True
+            # request.data["created_by"] = request.user.guid
+            # request.POST._mutable = False
 
             # if request.user.role in ['admin', 'manager'] or request.user.is_superuser:  # roles
             validated_data = ContactSerializer(data=request.data)
