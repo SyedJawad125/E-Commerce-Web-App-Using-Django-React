@@ -1,5 +1,7 @@
 import {React, useContext} from 'react'
 import {Link} from 'react-router-dom'
+import logo from '../images/logo.png'
+
 // import { AuthCon } from '../context/AuthContext'
 import '../App.css'
 
@@ -9,7 +11,10 @@ const Navbar = () => {
     
     <nav className="navbar">
       <div className="navbar-brand">
-      <Link to="/">BrandName</Link>
+        <a className="navbar-brand" href="/">
+          <img src={logo} alt="Logo" className="navbar-logo" />
+        </a>
+      {/* <Link to="/">E Commerce</Link> */}
       </div>
       <div className="navbar-links">
         <Link to="/">Home</Link>
