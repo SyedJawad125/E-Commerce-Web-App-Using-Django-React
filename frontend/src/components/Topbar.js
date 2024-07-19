@@ -1,6 +1,6 @@
 import React from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faPhone, faSignInAlt, faUserPlus, faPhoneAlt } from '@fortawesome/free-solid-svg-icons';
+import { faSignInAlt, faUserPlus, faPhoneAlt } from '@fortawesome/free-solid-svg-icons';
 
 // npm install @fortawesome/fontawesome-svg-core @fortawesome/free-solid-svg-icons 
   // @fortawesome/react-fontawesome
@@ -18,7 +18,7 @@ const Topbar = () => {
           <div className="d-flex align-items-center">
             <div className="icon-box d-flex align-items-center mx-2">
                <span><FontAwesomeIcon icon={faPhoneAlt} className="mr-2" />
-               Call us: (123) 456-7890</span>
+                    (123) 456-7890</span>
             </div>
             <div className="icon-box d-flex align-items-center mx-2">
                <span><FontAwesomeIcon icon={faSignInAlt} className="mr-2" />
