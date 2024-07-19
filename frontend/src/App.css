@@ -37,7 +37,7 @@
   }
 }
 
-/* Navbar CSS */
+/* Side Navbar CSS */
 
 body {
   font-family: "Lato", sans-serif;
@@ -506,7 +506,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0.5rem 1rem;
+  padding: 0.33rem 1rem;
   font-size: 1rem;
 }
 .left-content {
@@ -518,4 +518,15 @@ body {
   margin-right: 80px;
   justify-content: space-between;
   /* Other styles for the right-side content */
+}
+
+.top-bar .mr-2 {
+  margin-right: 0.5rem;
+  
+}
+
+.top-bar .mx-3 {
+  margin-left: 1rem;
+  margin-right: 1rem;
+  
 }
