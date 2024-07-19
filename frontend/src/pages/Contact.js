@@ -5,7 +5,6 @@ import axiosInstance from '../context/AxiosInstance'
 
 const Contact = () => {
 
-
   const navigate = useNavigate()
 
   const [name, setname] = useState('')
@@ -13,10 +12,7 @@ const Contact = () => {
   const [email, setemail] = useState('')
   const [message, setmessage] = useState('')
 
-
-
   // const [isSubmitting, setIsSubmitting] = useState(false);
-    
 
   const handleSubmit = async (e) => {
     try {
@@ -48,14 +44,8 @@ const Contact = () => {
         // Handle error
     }
     };
-
-    
-
-
-
   
   return (
-
     <div class="container contact-form">
     <div class="contact-image">
       <img src="https://image.ibb.co/kUagtU/rocket_contact.png" alt="rocket_contact"/>
