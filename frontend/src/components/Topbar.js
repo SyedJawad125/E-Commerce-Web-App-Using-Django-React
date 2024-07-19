@@ -2,6 +2,9 @@ import React from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPhone, faSignInAlt, faUserPlus, faPhoneAlt } from '@fortawesome/free-solid-svg-icons';
 
+// npm install @fortawesome/fontawesome-svg-core @fortawesome/free-solid-svg-icons 
+  // @fortawesome/react-fontawesome
+
 const Topbar = () => {
   return (
     
