@@ -50,34 +50,12 @@ const Publicproduct = () => {
     },   [flag, location.state])
 
 
-    const deleteRecord = async (id) => {
-    try{
-        const res = await axiosInstance.delete(`/ecommerce/product?id=${id}`)
-        if(res){
-            console.log('Delete Successfully')
-            setFlag(true)
-        }
-    }
-    catch(error){
-        console.log(error)
-    }
-    }
-
-    const updateRecord = async (item) => {
-    navigate('/Update/Updateproduct', {state: {data: item}})
-}
-
-
   // Clear timeout on unmount to prevent memory leaks
   useEffect(() => {
     return () => clearTimeout(debounceTimeout.current);
   }, []);
   return (
     <div class='container' >
-    
-
-   
-
     <div class="container mt-5">
       <div class="row">
         
