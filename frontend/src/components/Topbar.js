@@ -29,14 +29,14 @@ const Topbar = () => {
                         (123) 456-7890</span>
                 </div>
                   {
-              localStorage.getItem('token') ? <Link onClick={logout}>Sign Out</Link> : <Link to="/login">
+              localStorage.getItem('token') ? <Link onClick={logout} className="logout-lpg">
+                Sign Out</Link> : <Link to="/login">
                 <div className="icon-box d-flex align-items-center mx-2">
                     <span><FontAwesomeIcon icon={faSignInAlt} className="mr-2" />
                     Sign In</span>
                 </div></Link>
              
                    }
-                   
                 <div className="icon-box d-flex align-items-center mx-2">
                   <span><FontAwesomeIcon icon={faUserPlus}  className="mr-2" />
                   <Link to="/SignUp"  style={{ color: '#fff', marginLeft: 'auto' }}>SignUp</Link>
@@ -45,7 +45,6 @@ const Topbar = () => {
           </div>
         </div>
         </div>
-      
         /* {
         localStorage.getItem('token') ? <Link onClick={logout}>Sign Out</Link> : <Link to="/login">
           <div className="icon-box d-flex align-items-center mx-2">

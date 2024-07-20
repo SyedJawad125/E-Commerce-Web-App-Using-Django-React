@@ -1,4 +1,4 @@
-import {React, useEffect, useState, useRef} from 'react'
+import {React, useEffect, useState} from 'react'
 import {Link, useNavigate, useLocation} from 'react-router-dom'
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
@@ -13,15 +13,6 @@ const Publicproduct = () => {
     const [records, setRecords] = useState([])
     const [data, setData] = useState([])
     const [flag, setFlag] = useState(false)
-
-    const [search, setSearch] = useState('');
-    const [searchTerm, setSearchTerm] = useState('');
-    const [isLoading, setIsLoading] = useState(false); // Track loading state
-    const [searchResults, setSearchResults] = useState([]); // Store search results
-
-    const debounceTimeout = useRef(null); // useRef for timeout
-    // const location = useLocation();
-    // const { message } = location.state || { message: { name: '', text: '' } };
 
 
     useEffect(()=>{
@@ -49,11 +40,6 @@ const Publicproduct = () => {
         receiveData();
     },   [flag, location.state])
 
-
-  // Clear timeout on unmount to prevent memory leaks
-  useEffect(() => {
-    return () => clearTimeout(debounceTimeout.current);
-  }, []);
   return (
     <div class='container' >
     <div class="container mt-5">
@@ -64,8 +50,7 @@ const Publicproduct = () => {
         <div class="col-lg-3 col-md-6 mb-1">
 
             <div class="card" >
-                    <img src={`http://localhost:8000/${item.image}`}  class="card-image" alt="Jane"  />
-                   
+                    <img src={`http://localhost:8000/${item.image}`}  class="card-image" alt="Jane"  />                  
                      
             <div class="card-body">
                 <span><h5 class="card-title card-title-custom">{item.name}</h5></span>

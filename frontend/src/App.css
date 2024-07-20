@@ -560,3 +560,7 @@ body {
   height: 40px; /* Adjust the height of the logo */
   margin-left: 40px;
 }
+
+.logout-lpg{
+  color: white;
+}
