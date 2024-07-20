@@ -33,7 +33,7 @@ const Topbar = () => {
                 Sign Out</Link> : <Link to="/login">
                 <div className="icon-box d-flex align-items-center mx-2">
                     <span><FontAwesomeIcon icon={faSignInAlt} className="mr-2" />
-                    Sign In</span>
+                    Login</span>
                 </div></Link>
              
                    }

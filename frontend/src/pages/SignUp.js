@@ -59,8 +59,8 @@ const SignUp = () => {
         </div>
 
         <div class="col-lg-6 mb-5 mb-lg-0" >
-          <div class="card" style={{ marginRight: "150px"}} >
-            <div class="card-body py-4 px-md-5">
+          <div class="cards" style={{ marginRight: "150px"}} >
+            <div class="card-bodies py-4 px-md-5">
               <form>
                 <div class="row">
                   <div class="col-md-6 mb-4">

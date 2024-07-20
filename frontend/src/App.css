@@ -185,34 +185,7 @@ input[type=submit]:hover {
   background-color: #45a049;
 }
 
-/* Add a background color and some padding around the form */
-/* .container {
-  border-radius: 5px;
-  background-color: #f2f2f2;
-  padding: 20px;
-} */
 
-
-
-/* SignUp button CSS */
-.call-to-action {
-  display: flex;
-  justify-content : flex-end;
-}
-
-.right-button {
-  padding: 8px 20px;
-  background-color: #e20b24;
-  color: white;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  margin-top: 10px;
-}
-
-.right-button:hover {
-  background-color: #ab0b0b; /* Optional: Adds a hover effect */
-}
 
 
 
@@ -386,7 +359,7 @@ button{
 }
 
 
-/* Css for All cards       and       CSS for Check.js */
+/* Css for All cards in Categories and Products       and       CSS for Check.js */
 
 .card {
   border-radius: 15px;
@@ -565,8 +538,44 @@ body {
   color: white;
 }
 
+/* Login/SignUp Form CSS */
 
+.cards {
+  border-radius: 10px;
+  overflow: hidden;
+  width: 500px;
+  border: 1px solid #ccc;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 
+}
 
+.card-bodies {
+  text-align: center;
+}
+.textbox {
+  margin: 10px; /* Adjust margin as needed */
+  border: 1px solid black;
+  padding: 8px; /* Adds padding inside the textbox */
+}
+
+/* SignUp button CSS */
+.call-to-action {
+  display: flex;
+  justify-content : flex-end;
+}
+
+.right-button {
+  padding: 8px 20px;
+  background-color: #e20b24;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.right-button:hover {
+  background-color: #ab0b0b; /* Optional: Adds a hover effect */
+}
 
 

@@ -51,21 +51,21 @@ const Login = () => {
     <div class="container" >
     <div class="row justify-content-center">
         <div class="col-md-5">
-            <div class="card mt-5">
+            <div class="cards mt-5">
                 <div class="card-header">
                     <h3 class="text-center">Login</h3>
                 </div>
-                <div class="card-body" >
+                <div class="card-bodies" >
                     <form onSubmit={handleSubmit}>
                         <div class="mb-3">
                             <label for="username" class="form-label">User Name</label>
-                            <input type="text" class="form-control" id="username" aria-describedby="emailHelp" required value={username}
+                            <input type="text"  class="textbox" id="username" aria-describedby="emailHelp" required value={username}
                               onChange= {e => setUsername(e.target.value)}/>
                             <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
                         </div>
                         <div class="mb-3">
                             <label for="password" class="form-label">Password</label>
-                            <input type="password" class="form-control" id="password" required  value={password}
+                            <input type="password" class="textbox" id="password" required  value={password}
                               onChange= {e => setPassword(e.target.value)} />
                         </div>
                         {/* <div class="mb-3 form-check">
