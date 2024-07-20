@@ -5,7 +5,7 @@ import 'react-toastify/dist/ReactToastify.css';
 import axiosInstance from '../context/AxiosInstance';
 import '../App.css'
 
-const Publicproduct = () => {
+const Publiccategory = () => {
 
     const navigate = useNavigate()
     const location = useLocation()
@@ -35,7 +35,7 @@ const Publicproduct = () => {
           }
 
         const receiveData = async () =>{
-            const res = await axiosInstance.get('/ecommerce/publicproduct')
+            const res = await axiosInstance.get('/ecommerce/publiccategory')
             try{
                 if (res){
                     setRecords(res.data.data.data)
@@ -86,13 +86,10 @@ const Publicproduct = () => {
         <div class="col-lg-3 col-md-6 mb-1">
 
             <div class="card" >
-                    <img src={`http://localhost:8000/${item.image}`}  class="card-image" alt="Jane"  />
-                   
-                     
             <div class="card-body">
                 <span><h5 class="card-title card-title-custom">{item.name}</h5></span>
                 <span><h5 class="card-text card-text-custom">Des :{item.description}</h5></span>
-                <span><h5 class="card-text card-text-custom">Price :{item.price}</h5></span>
+                
                 {/* <h5 class="card-text">Category :{item.category_name}</h5> */}
             </div>
             </div>
@@ -109,4 +106,4 @@ const Publicproduct = () => {
   )
 }
 
-export default Publicproduct
+export default Publiccategory

@@ -17,6 +17,7 @@ import Contact from './pages/Contact';
 import {Routes, Route} from 'react-router-dom'
 // import ProtectedRoute from './context/ProtectedRoute'
 import Publicproduct from './pages/Publicproduct';
+import Publiccategory from './pages/Publiccategory';
 import Check from './pages/Check';
 
 
@@ -47,6 +48,8 @@ function App() {
             <Route path='/category' element={<Category/>}  />
             <Route path='/Add/Addcategory' element={<Addcategory/>}  />
             <Route path='/Update/Updatecategory' element={<Updatecategory/>}  />
+            <Route path='/publiccategory' element={<Publiccategory/>}  />
+
             <Route path='/check' element={<Check/>}  />
             <Route path='/contact' element={<Contact/>}  />
       </Routes>

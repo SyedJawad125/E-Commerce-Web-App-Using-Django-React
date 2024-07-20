@@ -15,6 +15,18 @@ class ProductSerializer(ModelSerializer):
         data['category_name'] = instance.prod_has_category.name if instance.prod_has_category else None
         return data
 
+class PublicproductSerializer(ModelSerializer):
+    class Meta:
+        model = Product
+        fields='__all__'
+
+    def to_representation(self, instance):
+        data = super().to_representation(instance)
+        data['created_by'] = UserListingSerializer(instance.created_by).data if instance.created_by else None
+        data['updated_by'] = UserListingSerializer(instance.updated_by).data if instance.updated_by else None
+        data['category_name'] = instance.prod_has_category.name if instance.prod_has_category else None
+        return data
+
 class CategorySerializer(ModelSerializer):
     class Meta:
         model = Category
@@ -25,7 +37,20 @@ class CategorySerializer(ModelSerializer):
         data['created_by'] = UserListingSerializer(instance.created_by).data if instance.created_by else None
         data['updated_by'] = UserListingSerializer(instance.updated_by).data if instance.updated_by else None
         return data
-    
+
+
+class PubliccategorySerializer(ModelSerializer):
+    class Meta:
+        model = Category
+        fields = '__all__'
+
+    def to_representation(self, instance):
+        data = super().to_representation(instance)
+        data['created_by'] = UserListingSerializer(instance.created_by).data if instance.created_by else None
+        data['updated_by'] = UserListingSerializer(instance.updated_by).data if instance.updated_by else None
+        return data
+
+
 class OrderSerializer(serializers.ModelSerializer):
     class Meta:
         model = Order
