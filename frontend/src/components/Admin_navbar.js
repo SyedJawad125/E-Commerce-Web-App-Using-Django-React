@@ -7,11 +7,11 @@ const Admin_navbar = () => {
     const {logout} = useContext(AuthCon)
   return (
     <div class="sidenav">
-        {/* <Link to="/">Home</Link>
-        <Link to="/about">About</Link> */}
+        <Link to="/adminpage">Adminpage</Link>
+        {/* <Link to="/about">About</Link> */}
         {/* <Link to="/services">Services</Link> */}
-        <Link to="/product">AdminPro</Link>
-        <Link to="/category">Admincate</Link>
+        <Link to="/product">AdminProducts</Link>
+        <Link to="/category">AdminCategories</Link>
         {/* <Link to="/contact">Contact</Link> */}
         {
             localStorage.getItem('token') ? <Link onClick={logout}>Logout</Link> : <Link to="/login">Login</Link>

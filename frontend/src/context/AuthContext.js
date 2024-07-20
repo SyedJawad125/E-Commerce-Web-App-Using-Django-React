@@ -1,4 +1,5 @@
-import React, { createContext, useState, useEffect } from 'react';
+import React, { createContext, useState } from 'react';
+// import { useNavigate  } from 'react-router-dom'
 import axiosInstance from './AxiosInstance'
 
 
@@ -6,6 +7,8 @@ export const AuthCon = createContext();
 
 
 export const AuthContext = ({ children }) => {
+  //  const navigate = useNavigate()
+ 
 
   const [token, setToken] = useState(()=> {
     const token = localStorage.getItem('token')
@@ -18,12 +21,15 @@ export const AuthContext = ({ children }) => {
   };
 
   const logout = async () => {
+
     const res = await axiosInstance.post('/user/logout')
     if (res){
       console.log('Logout')
     }
     localStorage.removeItem('token')
     setToken(null);
+      // navigate('/login');
+    
   };
 
 

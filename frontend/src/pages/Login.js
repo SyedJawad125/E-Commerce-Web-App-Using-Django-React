@@ -35,7 +35,7 @@ const Login = () => {
           });
           if (response.status===200){
             login(response.data.data.token)
-            navigate('/Admin_navbar', {state: {message: 'Logged In!'}})
+            navigate('/adminpage', {state: {message: 'Logged In!'}})
           }
         } catch (error) {
             // toast.error("invalid Username or Password")

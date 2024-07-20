@@ -20,13 +20,14 @@ import {Routes, Route, useLocation } from 'react-router-dom'
 import Publicproduct from './pages/Publicproduct';
 import Publiccategory from './pages/Publiccategory';
 import Check from './pages/Check';
+import Adminpage from './pages/Adminpage';
 
 
 function App() {
 
   const location = useLocation();
   const adminRoutes = ['/login', '/SignUp','/product','/Add/Addproduct','/Update/Updateproduct','/category',
-    '/Add/Addcategory','/Update/Updatecategory'];
+    '/Add/Addcategory','/Update/Updatecategory', '/adminpage'];
   const publicRoutes = ['/','/about','/services','/publicproduct','/publiccategory','/check','/contact',
             '/login', '/SignUp']
 
@@ -67,6 +68,8 @@ function App() {
 
             <Route path='/check' element={<Check/>}  />
             <Route path='/contact' element={<Contact/>}  />
+            <Route path='/adminpage' element={<Adminpage/>}  />
+
       </Routes>
     </div>
   );
