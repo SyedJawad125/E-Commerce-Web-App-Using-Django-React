@@ -512,6 +512,10 @@ body {
 .left-content {
   /* Optional styling for the left content */
 }
+.d-flex{
+  color: white;
+
+}
 
 .right-side {
   float: right;
