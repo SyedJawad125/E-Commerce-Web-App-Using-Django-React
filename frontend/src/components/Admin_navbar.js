@@ -12,7 +12,7 @@ const Admin_navbar = () => {
         {/* <Link to="/services">Services</Link> */}
         <Link to="/product">AdminProducts</Link>
         <Link to="/category">AdminCategories</Link>
-        {/* <Link to="/contact">Contact</Link> */}
+        <Link to="/">Public Site</Link>
         {
             localStorage.getItem('token') ? <Link onClick={logout}>Logout</Link> : <Link to="/login">Login</Link>
         }

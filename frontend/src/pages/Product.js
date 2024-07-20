@@ -74,7 +74,7 @@ const Product = () => {
   }, []);
 
   return (
-    <div class='container' >
+    <div class='container'  style={{ marginLeft: '200px' }} >
     <h2 class='mt-4'>List Of Products </h2>
 
     <Link type="submit" class="btn btn-primary mt-3" to='/Add/Addproduct'>Add Product</Link>

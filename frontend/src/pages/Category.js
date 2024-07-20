@@ -69,7 +69,7 @@ const Category = () => {
 
 
   return (
-    <div class='container' >
+    <div class='container'  style={{ marginLeft: '200px' }} >
     <h2 class='mt-4'>List Of Categories </h2>
 
     <Link type="submit" class="btn btn-primary mt-3" to='/Add/Addcategory'>Add Category</Link>

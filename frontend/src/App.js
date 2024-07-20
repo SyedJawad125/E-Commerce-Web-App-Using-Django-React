@@ -65,10 +65,10 @@ function App() {
             <Route path='/Add/Addcategory' element={<Addcategory/>}  />
             <Route path='/Update/Updatecategory' element={<Updatecategory/>}  />
             <Route path='/publiccategory' element={<Publiccategory/>}  />
-
+            <Route path='/adminpage' element={<Adminpage/>}  />
+            
             <Route path='/check' element={<Check/>}  />
             <Route path='/contact' element={<Contact/>}  />
-            <Route path='/adminpage' element={<Adminpage/>}  />
 
       </Routes>
     </div>
