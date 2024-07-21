@@ -8,6 +8,7 @@ const Addcategory = () => {
 
   const [name, setname] = useState('')
   const [description, setdescription] = useState('')
+  const [image, setimage] = useState(null)
   const [restaurantRecords, setrestaurantRecords] = useState([])
 
 
@@ -48,6 +49,10 @@ const Addcategory = () => {
       <input type="text" class="form-control" id="description" aria-describedby="description" value={description}
         onChange= {e => setdescription(e.target.value)}/>
     </div>
+    <div class="form-group">
+        <label for="image">Upload Image</label>
+        <input type="file" class="form-control-file" id="image" onChange={(e)=> setimage(e.target.files[0])}/>
+    </div> 
 
     <button type="submit" class="btn btn-primary mt-3">Submit</button>
   </form>

@@ -89,14 +89,9 @@ const Product = () => {
         
         { records ? 
         records.map(item => (
-        <div class="col-lg-3 col-md-6 mb-1">
-         
-
-            
+        <div class="col-lg-3 col-md-6 mb-1">      
             <div className="card" >
-                    <img src={`http://localhost:8000/${item.image}`}  class="card-image" />
-                   
-                     
+                    <img src={`http://localhost:8000/${item.image}`}  class="card-image" />          
             <div class="card-body">
                 <span><h5 class="card-title card-title-custom">Name :{item.name}</h5></span>
                 <span><h5 class="card-text card-text-custom">Des :{item.description}</h5></span>
