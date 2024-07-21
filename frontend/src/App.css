@@ -579,6 +579,7 @@ body {
 }
 
 
+
 /* src/components/Footer.css */
 .footer {
   background-color: #201E43;
@@ -597,7 +598,18 @@ body {
   flex: 1;
   margin: 0 10px;
 }
-
+.footer-section-logo{
+  flex: 1;
+  margin: 0 50px;
+  /* left: 50; Align to the left */
+  bottom: 500px; /* Adjust this value to move the logo down */
+  margin-left: 40px;
+  margin-right: 80px;
+}
+.navbar-logo{
+  width: 200px; /* Adjust the size as needed */
+  height: auto;
+}
 .footer-section h2 {
   font-size: 18px;
   margin-bottom: 20px;
