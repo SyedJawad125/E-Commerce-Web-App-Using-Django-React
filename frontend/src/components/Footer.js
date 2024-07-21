@@ -3,6 +3,7 @@ import React from 'react';
 import logo from '../images/logo5.jpg'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMapMarkerAlt, faPhone, faEnvelope } from '@fortawesome/free-solid-svg-icons';
+import { FaFacebookF, FaTwitter, FaInstagram, FaWhatsapp  } from 'react-icons/fa';
 
 
 const Footer = () => {
@@ -41,11 +42,25 @@ const Footer = () => {
                 <div className="footer-section">
                     <h2>Contct Us</h2>
                     <ul>
-                        <li><FontAwesomeIcon icon={faMapMarkerAlt} style={styles.icon} /><a href="/faq">DHA 2, Islamabad Pakistan.</a></li>
-                        <li><FontAwesomeIcon icon={faPhone} style={styles.icon} /><a href="/contact">(+92) 333 1906382</a></li>
-                        <li><FontAwesomeIcon icon={faPhone} style={styles.icon} /><a href="/contact">(+92) 333 1906382</a></li>
-                        <li><FontAwesomeIcon icon={faEnvelope} style={styles.icon} /><a href="/returns">nicenick1992@gmail.com</a></li>
+                        <li><FontAwesomeIcon icon={faMapMarkerAlt} style={styles.icon} />DHA 2, Islamabad Pakistan.</li>
+                        <li><FontAwesomeIcon icon={faPhone} style={styles.icon} />(+92) 333 1906382</li>
+                        <li><FontAwesomeIcon icon={faPhone} style={styles.icon} />(+92) 51 0000000</li>
+                        <li><FontAwesomeIcon icon={faEnvelope} style={styles.icon} />nicenick1992@gmail.com</li>
                     </ul>
+                    <div style={styles.iconContainer}>
+                        <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer" style={styles.iconStyle}>
+                        <FaFacebookF />
+                        </a>
+                        <a href="https://www.twitter.com" target="_blank" rel="noopener noreferrer" style={styles.iconStyle}>
+                        <FaTwitter />
+                        </a>
+                        <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer" style={styles.iconStyle}>
+                        <FaInstagram />
+                        </a>
+                        <a href="https://wa.me/YOUR_PHONE_NUMBER" target="_blank" rel="noopener noreferrer" style={styles.iconStyle}>
+                        <FaWhatsapp />
+                        </a>
+                    </div>
                 </div>
                 {/* <div className="footer-section">
                     <h2>Follow Us</h2>
@@ -60,17 +75,21 @@ const Footer = () => {
                 <p>&copy; 2024 Your Company. All rights reserved.</p>
             </div>
         </footer>
-       
-        
     );
 };
 const styles = {
    
     iconContainer: {
-      display: 'flex',
-      alignItems: 'center',
-      marginBottom: '10px',
+        display: 'flex',
+        justifyContent: 'center',
+        gap: '15px',
     },
+    iconStyle : {
+        color: '#fff',
+        fontSize: '24px',
+        textDecoration: 'none',
+      },
+      
     icon: {
       marginRight: '10px',
     },

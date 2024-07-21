@@ -1,6 +1,6 @@
 import React from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faSignInAlt, faUserPlus, faPhoneAlt } from '@fortawesome/free-solid-svg-icons';
+import { faSignInAlt, faUserPlus, faPhone } from '@fortawesome/free-solid-svg-icons';
 import { useContext} from 'react'
 import {Link} from 'react-router-dom'
 import { AuthCon } from '../context/AuthContext'
@@ -25,8 +25,8 @@ const Topbar = () => {
             </div> */}
           <div className="d-flex align-items-center" >
                 <div className="icon-box d-flex align-items-center mx-2">
-                  <span><FontAwesomeIcon icon={faPhoneAlt}  className="mr-2" />
-                        (123) 456-7890</span>
+                  <span><FontAwesomeIcon icon={faPhone}  className="mr-2" />
+                        (+92) 333 1906382</span>
                 </div>
                   {
               localStorage.getItem('token') ? <Link onClick={logout} className="logout-lpg">
