@@ -10,6 +10,7 @@ const Updatecategory = () => {
 
   const [name, setname] = useState(data.name)
   const [description, setdescription] = useState(data.description)
+  const [image, setimage] = useState(data.image) 
   const [restaurantRecords, setrestaurantRecords] = useState([])
 
 
@@ -17,13 +18,17 @@ const Updatecategory = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-
-        const payload = {"name":name , "description":description}
+      const formData = new FormData();
+      formData.append('id',data.id)
+      formData.append('name',name)
+      formData.append('description',description)
+      formData.append('image',image)
+        // const payload = {"name":name , "description":description}
         
-        const response = await axiosInstance.patch('/ecommerce/category', payload , {
-        headers: {
-            'Content-Type': 'application/json'
-        }
+        const response = await axiosInstance.patch('/ecommerce/category',formData , {
+          headers: {
+            'Content-Type': 'multipart/form-data'
+          }
         });
         if (response){
         console.log('Response:', response.data);
@@ -49,7 +54,10 @@ const Updatecategory = () => {
       <input type="text" class="form-control" id="description" aria-describedby="description" value={description}
         onChange= {e => setdescription(e.target.value)}/>
     </div>
-
+    <div class="form-group">
+      <label for="image">Upload Image</label>
+      <input type="file" class="form-control-file" id="image" onChange={(e)=> setimage(e.target.files[0])}/>
+    </div> 
     <button type="submit" class="btn btn-primary mt-3">Submit</button>
   </form>
 </div>

@@ -9,20 +9,22 @@ const Addcategory = () => {
   const [name, setname] = useState('')
   const [description, setdescription] = useState('')
   const [image, setimage] = useState(null)
-  const [restaurantRecords, setrestaurantRecords] = useState([])
 
 
  
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-
-        const payload = {"name":name , "description":description}
+        const formData = new FormData();
+        formData.append('name',name)
+        formData.append('description',description)
+        formData.append('image',image)
+        // const payload = {"name":name , "description":description}
         
-        const response = await axiosInstance.post('/ecommerce/category', payload , {
-        headers: {
-            'Content-Type': 'application/json'
-        }
+        const response = await axiosInstance.post('/ecommerce/category', formData , {
+          headers: {
+            'Content-Type': 'multipart/form-data'
+          }
         });
         if (response){
         console.log('Response:', response.data);
