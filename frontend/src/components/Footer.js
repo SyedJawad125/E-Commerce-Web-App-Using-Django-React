@@ -3,7 +3,7 @@ import React from 'react';
 import logo from '../images/logo5.jpg'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMapMarkerAlt, faPhone, faEnvelope } from '@fortawesome/free-solid-svg-icons';
-import { FaFacebookF, FaTwitter, FaInstagram, FaWhatsapp  } from 'react-icons/fa';
+import { FaFacebookF, FaTwitter, FaInstagram, FaWhatsapp, FaLinkedinIn, FaYoutube    } from 'react-icons/fa';
 
 
 const Footer = () => {
@@ -57,8 +57,14 @@ const Footer = () => {
                         <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer" style={styles.iconStyle}>
                         <FaInstagram />
                         </a>
-                        <a href="https://wa.me/YOUR_PHONE_NUMBER" target="_blank" rel="noopener noreferrer" style={styles.iconStyle}>
+                        <a href="https://wa.me/923331906382" target="_blank" rel="noopener noreferrer" style={styles.iconStyle}>
                         <FaWhatsapp />
+                        </a>
+                        <a href="https://www.linkedin.com/in/syed-jawad-ali-080286b9/" target="_blank" rel="noopener noreferrer" style={styles.iconStyle}>
+                        <FaLinkedinIn />
+                        </a>
+                        <a href="https://www.youtube.com" target="_blank" rel="noopener noreferrer" style={styles.iconStyle}>
+                        <FaYoutube />
                         </a>
                     </div>
                 </div>
@@ -84,14 +90,17 @@ const styles = {
         justifyContent: 'center',
         gap: '15px',
     },
+
     iconStyle : {
         color: '#fff',
-        fontSize: '24px',
+        fontSize: '28px',
         textDecoration: 'none',
       },
       
     icon: {
       marginRight: '10px',
+      fontSize: '18px',
+
     },
   };
 export default Footer;

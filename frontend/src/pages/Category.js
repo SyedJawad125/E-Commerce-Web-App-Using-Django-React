@@ -14,15 +14,6 @@ const Category = () => {
     const [data, setData] = useState([])
     const [flag, setFlag] = useState(false)
 
-    const [search, setSearch] = useState('');
-    const [searchTerm, setSearchTerm] = useState('');
-    const [isLoading, setIsLoading] = useState(false); // Track loading state
-    const [searchResults, setSearchResults] = useState([]); // Store search results
-
-    const debounceTimeout = useRef(null); // useRef for timeout
-    // const location = useLocation();
-    // const { message } = location.state || { message: { name: '', text: '' } };
-
 
     useEffect(()=>{
         if (location.state && location.state.name){
