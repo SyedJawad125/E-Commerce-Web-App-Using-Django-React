@@ -42,8 +42,8 @@ class CategoryFilter(FilterSet):
 
     class Meta:
         model = Category
-        fields ='__all__'
-
+        # fields ='__all__'
+        exclude = ['image']
 class PubliccategoryFilter(FilterSet):
     id = CharFilter(field_name='id')
     date_from = DateFilter(field_name='created_at', lookup_expr='gte' )
@@ -52,7 +52,8 @@ class PubliccategoryFilter(FilterSet):
 
     class Meta:
         model = Category
-        fields ='__all__'
+        # fields ='__all__'
+        exclude = ['image']
 class OrderFilter(FilterSet):
     id = CharFilter(field_name='id')
     # dept_updated_by_user= CharFilter(field_name='id')
