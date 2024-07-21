@@ -1,7 +1,8 @@
 // src/components/Footer.js
 import React from 'react';
 import logo from '../images/logo5.jpg'
-
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faMapMarkerAlt, faPhone, faEnvelope } from '@fortawesome/free-solid-svg-icons';
 
 
 const Footer = () => {
@@ -40,10 +41,10 @@ const Footer = () => {
                 <div className="footer-section">
                     <h2>Contct Us</h2>
                     <ul>
-                        <li><a href="/faq">DHA 2, Islamabad Pakistan.</a></li>
-                        <li><a href="/contact">(+92) 333 1906382</a></li>
-                        <li><a href="/contact">(+92) 333 1906382</a></li>
-                        <li><a href="/returns">nicenick1992@gmail.com</a></li>
+                        <li><FontAwesomeIcon icon={faMapMarkerAlt} style={styles.icon} /><a href="/faq">DHA 2, Islamabad Pakistan.</a></li>
+                        <li><FontAwesomeIcon icon={faPhone} style={styles.icon} /><a href="/contact">(+92) 333 1906382</a></li>
+                        <li><FontAwesomeIcon icon={faPhone} style={styles.icon} /><a href="/contact">(+92) 333 1906382</a></li>
+                        <li><FontAwesomeIcon icon={faEnvelope} style={styles.icon} /><a href="/returns">nicenick1992@gmail.com</a></li>
                     </ul>
                 </div>
                 {/* <div className="footer-section">
@@ -59,7 +60,19 @@ const Footer = () => {
                 <p>&copy; 2024 Your Company. All rights reserved.</p>
             </div>
         </footer>
+       
+        
     );
 };
-
+const styles = {
+   
+    iconContainer: {
+      display: 'flex',
+      alignItems: 'center',
+      marginBottom: '10px',
+    },
+    icon: {
+      marginRight: '10px',
+    },
+  };
 export default Footer;

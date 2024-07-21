@@ -10,8 +10,7 @@ const Updatecategory = () => {
 
   const [name, setname] = useState(data.name)
   const [description, setdescription] = useState(data.description)
-  const [image, setimage] = useState(data.image) 
-  const [restaurantRecords, setrestaurantRecords] = useState([])
+  const [image, setimage] = useState(data.image)
 
 
  
