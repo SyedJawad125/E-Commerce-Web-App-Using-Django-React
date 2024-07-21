@@ -10,7 +10,7 @@ const Footer = () => {
             <div className="footer-top">
                 <div className="footer-section-logo">
                     <a href="/">
-                       <img src={logo} alt="Logo" className="navbar-logo" />
+                       <img src={logo} alt="Logo" className="footer-logo" />
                     </a>
                 </div>
                 <div className="footer-section">
@@ -41,6 +41,7 @@ const Footer = () => {
                     <h2>Contct Us</h2>
                     <ul>
                         <li><a href="/faq">DHA 2, Islamabad Pakistan.</a></li>
+                        <li><a href="/contact">(+92) 333 1906382</a></li>
                         <li><a href="/contact">(+92) 333 1906382</a></li>
                         <li><a href="/returns">nicenick1992@gmail.com</a></li>
                     </ul>
