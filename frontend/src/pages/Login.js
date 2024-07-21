@@ -47,6 +47,12 @@ const Login = () => {
         navigate('/SignUp' )
     }
 
+    const textboxStyle = {
+      margin: '10px', // Adjust margin as needed
+      border: '1px solid black',
+      padding: '8px', // Adds padding inside the textbox
+    };
+
   return (
     <div class="container" >
     <div class="row justify-content-center">
@@ -59,8 +65,11 @@ const Login = () => {
                     <form onSubmit={handleSubmit}>
                         <div class="mb-3">
                             <label for="username" class="form-label">User Name</label>
-                            <input type="text"  class="textbox" id="username" aria-describedby="emailHelp" required value={username}
-                              onChange= {e => setUsername(e.target.value)}/>
+                            {/* <input type="text" style={textboxStyle} id="username" aria-describedby="emailHelp" required value={username}
+                              onChange= {e => setUsername(e.target.value)}/> */}
+                              <input type="text" value={username} onChange= {e => setUsername(e.target.value)} placeholder="Enter Username"
+                                class="textbox"/>
+      
                             <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
                         </div>
                         <div class="mb-3">

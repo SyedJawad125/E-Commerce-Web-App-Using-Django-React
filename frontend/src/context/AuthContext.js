@@ -28,7 +28,7 @@ export const AuthContext = ({ children }) => {
     }
     localStorage.removeItem('token')
     setToken(null);
-      // navigate('/login');
+      // navigate('/');
     
   };
 

@@ -21,6 +21,7 @@ import Publicproduct from './pages/Publicproduct';
 import Publiccategory from './pages/Publiccategory';
 import Check from './pages/Check';
 import Adminpage from './pages/Adminpage';
+import Footer from './components/Footer';
 
 
 function App() {
@@ -69,8 +70,9 @@ function App() {
             
             <Route path='/check' element={<Check/>}  />
             <Route path='/contact' element={<Contact/>}  />
-
       </Routes>
+      {!adminRoutes.includes(location.pathname) && <Footer />}
+
     </div>
   );
 }
