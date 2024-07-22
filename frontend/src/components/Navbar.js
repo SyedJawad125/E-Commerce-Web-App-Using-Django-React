@@ -22,6 +22,7 @@ const Navbar = () => {
         <Link to="/services">Services</Link>
         <Link to="/publiccategory">Categories</Link>
         <Link to="/publicproduct">Products</Link>
+        <Link to="/category_slider">Category_slider</Link>
         {/* <Link to="/product">AdminPro</Link>
         <Link to="/category">Admincate</Link> */}
 
