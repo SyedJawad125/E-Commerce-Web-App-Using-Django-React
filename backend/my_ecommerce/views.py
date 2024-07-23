@@ -6,7 +6,7 @@ from rest_framework.response import Response
 #from .blog_serializer import BlogSerializer
 from utils.base_authentication import JWTAuthentication
 from .my_ecommerce_controller import CategoryController, ContactController, ProductController, OrderController, \
-    PublicproductController, PubliccategoryController
+    PublicproductController, PubliccategoryController, SlidercategoryController
 
 # from rest_framework.permissions import IsAdminUser
 # Create your views here.
@@ -16,6 +16,7 @@ product_controller = ProductController()
 publicproduct_controller = PublicproductController()
 category_controller = CategoryController()
 publiccategory_controller = PubliccategoryController()
+slidercategory_controller = SlidercategoryController()
 order_controller = OrderController()
 contact_controller = ContactController()
 
@@ -65,11 +66,13 @@ class CategoryViews(ModelViewSet):
 
 class PubliccategoryViews(ModelViewSet):
     # authentication_classes = [JWTAuthentication]
-
     def get_publiccategory(self, request):
         return publiccategory_controller.get_publiccategory(request)
 
-
+class SlidercategoryViews(ModelViewSet):
+    # authentication_classes = [JWTAuthentication]
+    def get_slidercategory(self, request):
+        return slidercategory_controller.get_slidercategory(request)
 class OrderViews(ModelViewSet):
     authentication_classes = [JWTAuthentication]
 

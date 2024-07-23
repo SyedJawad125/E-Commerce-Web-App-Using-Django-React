@@ -49,7 +49,16 @@ class PubliccategorySerializer(ModelSerializer):
         data['created_by'] = UserListingSerializer(instance.created_by).data if instance.created_by else None
         data['updated_by'] = UserListingSerializer(instance.updated_by).data if instance.updated_by else None
         return data
+class SlidercategorySerializer(ModelSerializer):
+    class Meta:
+        model = Category
+        fields = '__all__'
 
+    def to_representation(self, instance):
+        data = super().to_representation(instance)
+        data['created_by'] = UserListingSerializer(instance.created_by).data if instance.created_by else None
+        data['updated_by'] = UserListingSerializer(instance.updated_by).data if instance.updated_by else None
+        return data
 
 class OrderSerializer(serializers.ModelSerializer):
     class Meta:

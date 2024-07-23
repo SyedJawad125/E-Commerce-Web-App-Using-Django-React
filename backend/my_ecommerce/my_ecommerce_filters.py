@@ -54,6 +54,17 @@ class PubliccategoryFilter(FilterSet):
         model = Category
         # fields ='__all__'
         exclude = ['image']
+
+class SlidercategoryFilter(FilterSet):
+    id = CharFilter(field_name='id')
+    date_from = DateFilter(field_name='created_at', lookup_expr='gte' )
+    date_to = DateFilter(field_name='created_at', lookup_expr='lte' )
+    name = CharFilter(field_name='name', lookup_expr='icontains')
+
+    class Meta:
+        model = Category
+        # fields ='__all__'
+        exclude = ['image']
 class OrderFilter(FilterSet):
     id = CharFilter(field_name='id')
     # dept_updated_by_user= CharFilter(field_name='id')
