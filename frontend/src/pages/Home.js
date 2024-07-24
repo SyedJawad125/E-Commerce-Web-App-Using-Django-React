@@ -9,6 +9,8 @@ import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import Category_slider from './Category_slider';
+import Category_vertical_slider from './Category_vertical_slider';
+
 // npm install react-slick slick-carousel
 
 const Home = () => {
@@ -56,6 +58,7 @@ const Home = () => {
       <div style={{ marginTop: '65px', marginBottom: '100px'}}>
         <Category_slider />
       </div>
+      <Category_vertical_slider/>
       </>
   )
 }

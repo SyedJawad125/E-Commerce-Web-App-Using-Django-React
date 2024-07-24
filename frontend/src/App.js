@@ -23,6 +23,7 @@ import Check from './pages/Check';
 import Adminpage from './pages/Adminpage';
 import Footer from './components/Footer';
 import Category_slider from './pages/Category_slider';
+import Category_vertical_slider from './pages/Category_vertical_slider';
 // import Slider from 'react-slick';
 
 
@@ -32,7 +33,7 @@ function App() {
   const adminRoutes = ['/login', '/SignUp','/product','/Add/Addproduct','/Update/Updateproduct','/category',
     '/Add/Addcategory','/Update/Updatecategory', '/adminpage'];
   const publicRoutes = ['/','/about','/services','/publicproduct','/publiccategory','/check','/contact','/category_slider',
-            ,'/login', '/SignUp'];
+    '/category_vertical_slider','/login', '/SignUp'];
 
   return (
     <div>
@@ -70,6 +71,7 @@ function App() {
             <Route path='/publiccategory' element={<Publiccategory/>}  />
             <Route path='/adminpage' element={<Adminpage/>}  />
             <Route path='/category_slider' element={<Category_slider/>}  />
+            <Route path='/category_vertical_slider' element={<Category_vertical_slider/>}  />
             {/* <Route path='/slider' element={<Slider/>}  /> */}        
             <Route path='/check' element={<Check/>}  />
             <Route path='/contact' element={<Contact/>}  />

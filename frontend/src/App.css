@@ -713,3 +713,42 @@ body {
 @import "~slick-carousel/slick/slick-theme.css";
 
 
+
+/* Category_vertical_slider CSS */
+
+.vertical-slider-container {
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 225px; /* Adjust as necessary */
+  padding: 20px;
+  background-color: #f8f9fa;
+  overflow: hidden;
+  box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+}
+
+.slider-wrapper-verticle {
+  height: 100%;
+  overflow: hidden;
+}
+
+.slider-item-verticle {
+  padding: 10px;
+}
+.card-verticle{
+  border-radius: 10px;
+  overflow: hidden;
+  width: 175px;
+  border: 1px solid #ccc;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+.card-image-verticle {
+  max-width: 100%;
+  height: auto;
+}
+
+.card-title-custom, .card-text-custom {
+  font-size: 16px;
+  margin: 5px 0;
+}
