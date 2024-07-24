@@ -197,6 +197,9 @@ input[type=submit]:hover {
 }
 
 .navbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -481,6 +484,9 @@ body {
   align-items: center;
   padding: 0.33rem 1rem;
   font-size: 1rem;
+  z-index: 999;
+  position: sticky;
+  top: 0px; /* Adjust based on the height of your topbar */
 }
 .left-content {
   /* Optional styling for the left content */
