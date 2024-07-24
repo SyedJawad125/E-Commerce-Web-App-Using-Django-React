@@ -33,6 +33,21 @@ class PublicproductFilter(FilterSet):
         # fields ='__all__'
         exclude = ['image']
 
+class SliderproductFilter(FilterSet):
+    id = CharFilter(field_name='id')
+    # dept_updated_by_user= CharFilter(field_name='id')
+    # dept_added_by_user= CharFilter(field_name='id')
+    date_from = DateFilter(field_name='created_at', lookup_expr='gte' )
+    date_to = DateFilter(field_name='created_at', lookup_expr='lte' )
+    name = CharFilter(field_name='name', lookup_expr='icontains')
+    price = CharFilter(field_name='price')
+    description = CharFilter(field_name='description', lookup_expr='icontains')
+
+    class Meta:
+        model = Product
+        # fields ='__all__'
+        exclude = ['image']
+
 
 class CategoryFilter(FilterSet):
     id = CharFilter(field_name='id')

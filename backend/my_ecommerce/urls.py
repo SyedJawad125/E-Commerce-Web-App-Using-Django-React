@@ -1,6 +1,6 @@
 from django.urls import path
 from .views import CategoryViews, ContactViews, ProductViews, OrderViews, PublicproductViews, PubliccategoryViews, \
-    SlidercategoryViews
+    SlidercategoryViews, SliderproductViews
 
 urlpatterns = [
     path('product', ProductViews.as_view({"get": "get_product",
@@ -9,6 +9,8 @@ urlpatterns = [
                                           "delete": "delete_product"})),
 
     path('publicproduct', PublicproductViews.as_view({"get": "get_publicproduct"})),
+
+    path('sliderproduct', SliderproductViews.as_view({"get": "get_sliderproduct"})),
 
     path('category', CategoryViews.as_view({"get": "get_category",
                                                 "post": "post_category",
