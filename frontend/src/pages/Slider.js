@@ -18,7 +18,7 @@ const Slider = () => {
 
   return (
     <div className="slider-container">
-      <button className="arrow left" onClick={handlePrev}>‹</button>
+      <button className="fas fa-arrow-left" onClick={handlePrev}>‹</button>
       <div className="slider">
         <div className="slider-track" style={{ transform: `translateX(-${currentIndex * 100 / 5}%)` }}>
           {cards.map((card, index) => (

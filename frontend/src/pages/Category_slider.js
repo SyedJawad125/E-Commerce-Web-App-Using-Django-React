@@ -26,7 +26,7 @@ const Category_slider = () => {
         }
 
         const receiveData = async () => {
-            const res = await axiosInstance.get('/ecommerce/category');
+            const res = await axiosInstance.get('/ecommerce/slidercategory');
             try {
                 if (res) {
                     setRecords(res.data.data.data);
@@ -39,39 +39,25 @@ const Category_slider = () => {
         receiveData();
     }, [flag, location.state, navigate]);
 
-    const deleteRecord = async (id) => {
-        try {
-            const res = await axiosInstance.delete(`/ecommerce/category?id=${id}`);
-            if (res) {
-                console.log('Delete Successfully');
-                setFlag(true);
-            }
-        } catch (error) {
-            console.log(error);
-        }
-    };
-
-    const updateRecord = async (item) => {
-        navigate('/Update/Updatecategory', { state: { data: item } });
-    };
-
     const settings = {
         dots: true,
         infinite: true,
         speed: 500,
-        slidesToShow: 5,
-        slidesToScroll: 1
+        slidesToShow: 4,
+        slidesToScroll: 1,
+        autoplay: true,
+        autoplaySpeed: 2000 // 2000ms = 2 seconds
     };
 
     return (
         <div className="container" style={{ marginLeft: '200px' }}>
-            <h2 className="mt-4">List Of Categories </h2>
-            <Link type="submit" className="btn btn-primary mt-3" to="/Add/Addcategory">
+            {/* <h2 className="mt-4">List Of Categories </h2> */}
+            {/* <Link type="submit" className="btn btn-primary mt-3" to="/Add/Addcategory">
                 Add Category
-            </Link>
-            <br />
-            <br />
-            {data ? <p>Total: {data.count}</p> : <p>Total: 0</p>}
+            </Link> */}
+            {/* <br />
+            <br /> */}
+            {/* {data ? <p>Total: {data.count}</p> : <p>Total: 0</p>} */}
             <div className="container mt-5">
                 <Slider {...settings}>
                     {records ? (
@@ -86,12 +72,6 @@ const Category_slider = () => {
                                     <div className="card-body">
                                         <h5 className="card-title card-title-custom">{item.name}</h5>
                                         <h5 className="card-text card-text-custom">Des: {item.description}</h5>
-                                        <button className="btn btn-danger" onClick={() => deleteRecord(item.id)}>
-                                            Delete
-                                        </button>
-                                        <button className="btn btn-primary mx-2" onClick={() => updateRecord(item)}>
-                                            Update
-                                        </button>
                                     </div>
                                 </div>
                             </div>

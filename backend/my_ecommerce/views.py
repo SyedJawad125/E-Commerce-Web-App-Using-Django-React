@@ -73,6 +73,7 @@ class SlidercategoryViews(ModelViewSet):
     # authentication_classes = [JWTAuthentication]
     def get_slidercategory(self, request):
         return slidercategory_controller.get_slidercategory(request)
+    
 class OrderViews(ModelViewSet):
     authentication_classes = [JWTAuthentication]
 

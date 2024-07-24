@@ -8,7 +8,7 @@ import '../App.css'
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
-
+import Category_slider from './Category_slider';
 // npm install react-slick slick-carousel
 
 const Home = () => {
@@ -48,11 +48,14 @@ const Home = () => {
           {/* <h1>Slide 5</h1> */}
         </div>
       </Slider>
-      <div class="about-section" style={{ marginTop: '45px'}}>
+       {/* <div class="about-section" style={{ marginTop: '45px'}}>
             <h1>Please Login Here</h1>
            <p>Please Login Here for using the Management Sysyem</p>
-           {/* <p>Resize the browser window to see that this page is responsive by the way.</p> */}
-       </div>
+            <p>Resize the browser window to see that this page is responsive by the way.</p> 
+       </div>  */}
+      <div style={{ marginTop: '100px', marginBottom: '100px' }}>
+        <Category_slider />
+      </div>
       </>
   )
 }

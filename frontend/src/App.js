@@ -31,7 +31,7 @@ function App() {
   const location = useLocation();
   const adminRoutes = ['/login', '/SignUp','/product','/Add/Addproduct','/Update/Updateproduct','/category',
     '/Add/Addcategory','/Update/Updatecategory', '/adminpage'];
-  const publicRoutes = ['/','/about','/services','/publicproduct','/publiccategory','/check','/contact','category_slider',
+  const publicRoutes = ['/','/about','/services','/publicproduct','/publiccategory','/check','/contact','/category_slider',
             ,'/login', '/SignUp'];
 
   return (

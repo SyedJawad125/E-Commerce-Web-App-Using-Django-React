@@ -665,7 +665,7 @@ body {
 
 /* CSS for Cards Slider on the page src/Slider.js */
 
-/* .slider-container {
+.slider-container {
   position: relative;
   width: 100%;
   overflow: hidden;
@@ -681,23 +681,24 @@ body {
   transition: transform 0.3s ease;
 }
 
-.card {
+/* .card {
   min-width: 20%; /* Adjust based on the number of visible cards */
   /* box-sizing: border-box;
   padding: 20px;
   background: #eee;
-  text-align: center; */
-/* } */
+  text-align: center;
+ }   */
 
-/* .arrow {
+.arrow {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background: rgba(0, 0, 0, 0.5);
-  color: white;
+  background: rgba(0, 0, 0, 0.5); /* background color */
+  color: red; /* arrow color */
   border: none;
   padding: 10px;
   cursor: pointer;
+  content: "\f054";
 }
 
 .arrow.left {
@@ -706,10 +707,10 @@ body {
 
 .arrow.right {
   right: 0;
-} */ 
+} 
 
 /* src/App.css */
-/* @import "~slick-carousel/slick/slick.css";
-@import "~slick-carousel/slick/slick-theme.css"; */
+@import "~slick-carousel/slick/slick.css";
+@import "~slick-carousel/slick/slick-theme.css";
 
 
