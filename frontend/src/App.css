@@ -721,7 +721,7 @@ body {
   left: 0;
   top: 0;
   bottom: 0;
-  width: 215px; /* Adjust as necessary */
+  width: 205px; /* Adjust as necessary */
   padding: 20px;
   background-color: #f8f9fa;
   overflow: hidden;
@@ -739,7 +739,7 @@ body {
 .card-verticle{
   border-radius: 10px;
   overflow: hidden;
-  width: 165px;
+  width: 155px;
   border: 1px solid #ccc;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
@@ -752,3 +752,30 @@ body {
   font-size: 16px;
   margin: 5px 0;
 }
+
+
+/* Home Page CSS */
+
+.main-layout {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.content-with-sidebar {
+  display: flex;
+  flex-grow: 1;
+}
+
+
+.main-content {
+  flex-grow: 1;
+  padding: 20px;
+  background-color: #fff;
+} 
+
+
+.card-image-verticle {
+  width: 100%;
+  height: auto;
+} 
