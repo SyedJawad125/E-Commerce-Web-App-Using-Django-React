@@ -721,7 +721,7 @@ body {
   left: 0;
   top: 0;
   bottom: 0;
-  width: 225px; /* Adjust as necessary */
+  width: 215px; /* Adjust as necessary */
   padding: 20px;
   background-color: #f8f9fa;
   overflow: hidden;
@@ -739,7 +739,7 @@ body {
 .card-verticle{
   border-radius: 10px;
   overflow: hidden;
-  width: 175px;
+  width: 165px;
   border: 1px solid #ccc;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
