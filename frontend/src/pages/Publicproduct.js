@@ -41,7 +41,7 @@ const Publicproduct = () => {
     },   [flag, location.state])
 
   return (
-    <div class='container' >
+    <div class='container' style={{ marginTop: '15px', marginBottom: '100px',  marginLeft: '200px' }}>
     <div class="container mt-5">
       <div class="row">
         

@@ -7,7 +7,7 @@ import '../App.css'
 
 const Services = () => {
   return (
-    <div class='container'  >
+    <div class='container' style={{ marginTop: '15px', marginBottom: '100px' }}>
                 
       <div class="about-section">
           <h1>Our Services</h1>
@@ -41,6 +41,16 @@ const Services = () => {
             </div>
           </div>
         
+          <div class="col-md-4 mb-4">
+            <div class="card h-100">
+              <img src={img3} class="card-img-top" alt="Service 3" /> 
+              <div class="card-body">
+                <h5 class="card-title">Mobile App Developement</h5>
+                <p class="card-text">We offer 24/7 customer support to assist you with any inquiries and ensure a seamless experience.</p>
+                <button class="btn">Read More</button>
+              </div>
+            </div>
+          </div>
           <div class="col-md-4 mb-4">
             <div class="card h-100">
               <img src={img3} class="card-img-top" alt="Service 3" /> 

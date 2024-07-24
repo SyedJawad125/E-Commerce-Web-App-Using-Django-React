@@ -53,7 +53,7 @@ const Home = () => {
            <p>Please Login Here for using the Management Sysyem</p>
             <p>Resize the browser window to see that this page is responsive by the way.</p> 
        </div>  */}
-      <div style={{ marginTop: '100px', marginBottom: '100px' }}>
+      <div style={{ marginTop: '65px', marginBottom: '100px'}}>
         <Category_slider />
       </div>
       </>
