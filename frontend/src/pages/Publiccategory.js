@@ -3,6 +3,7 @@ import {Link, useNavigate, useLocation} from 'react-router-dom'
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import axiosInstance from '../context/AxiosInstance';
+import Product_vertical_slider from './Product_vertical_slider';
 import '../App.css'
 
 const Publiccategory = () => {
@@ -65,6 +66,7 @@ const Publiccategory = () => {
     </div>  
      
     <ToastContainer/>
+    <Product_vertical_slider/>
 </div>
   )
 }

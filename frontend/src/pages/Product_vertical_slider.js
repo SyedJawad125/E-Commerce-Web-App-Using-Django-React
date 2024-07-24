@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from 'react';
-import { Link, useNavigate, useLocation } from 'react-router-dom';
+import {React, useEffect, useState } from 'react';
+import { useNavigate, useLocation } from 'react-router-dom';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import axiosInstance from '../context/AxiosInstance';
@@ -53,7 +53,7 @@ const Product_vertical_slider = () => {
 
     return (
         <div className="vertical-slider-container">
-            <h2 className="mt-4">Categories </h2>
+            <h2 className="mt-4">Products </h2>
             <div className="slider-wrapper-verticle">
                 <Slider {...settings}>
                     {records ? (
@@ -81,4 +81,4 @@ const Product_vertical_slider = () => {
     );
 };
 
-export default Product_vertical_slider;
+export default Product_vertical_slider
