@@ -65,7 +65,7 @@ const Product_vertical_slider = () => {
                                          alt={item.name} />
                                     <div className="card-body">
                                     <span><h5 class="card-title card-title-custom">{item.name}</h5></span>
-                                    <span><h5 class="card-text card-text-custom">Des :{item.description}</h5></span>
+                                    {/* <span><h5 class="card-text card-text-custom">Des :{item.description}</h5></span> */}
                                     <span><h5 class="card-text card-text-custom">Price :{item.price}</h5></span>
                                     </div>
                                 </div>
