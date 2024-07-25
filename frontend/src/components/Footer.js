@@ -16,7 +16,7 @@ const Footer = () => {
                     </a>
                 </div>
                 <div className="footer-section">
-                    <h2>SUPPORT</h2>
+                    <h2 >SUPPORT</h2>
                     <ul>
                         <li><a href="/faq">FAQ</a></li>
                         <li><a href="/contact">Contact Us</a></li>
