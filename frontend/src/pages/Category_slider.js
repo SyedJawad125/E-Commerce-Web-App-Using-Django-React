@@ -72,7 +72,7 @@ const Category_slider = () => {
                                     </a>
                                     <div className="card-body">
                                         <h5 className="card-title card-title-custom">{item.name}</h5>
-                                        <h5 className="card-text card-text-custom">Des: {item.description}</h5>
+                                        {/* <h5 className="card-text card-text-custom">Des: {item.description}</h5> */}
                                     </div>
                                 </div>
                             </div>
