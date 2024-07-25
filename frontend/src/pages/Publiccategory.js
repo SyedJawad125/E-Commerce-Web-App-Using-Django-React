@@ -49,7 +49,7 @@ const Publiccategory = () => {
         records.map(item => (
         <div class="col-lg-3 col-md-6 mb-1">
             <div class="card" >
-              <a className="navbar-brand" href="/publicproduct">
+              <a  href="/publicproduct">
                 <img src={`http://localhost:8000/${item.image}`}  class="card-image" />
               </a>
             <div class="card-body">
