@@ -8,7 +8,7 @@ import '../App.css'
 
 const Services = () => {
   const text1 = `Explore our wide range of vehicles. From family cars to luxury sedans, we offer the best options 
-                to suit your needs vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv.`;
+                to suit your needs.`;
   const text2 = `Explore our wide range of vehicles. From family cars to luxury sedans, we offer the best options 
   to suit your needs.`;
   const text3 = `Explore our wide range of vehicles. From family cars to luxury sedans, we offer the best options 
