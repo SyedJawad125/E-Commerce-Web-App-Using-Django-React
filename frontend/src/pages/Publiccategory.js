@@ -49,12 +49,17 @@ const Publiccategory = () => {
         records.map(item => (
         <div class="col-lg-3 col-md-6 mb-1">
             <div class="card" >
-               <img src={`http://localhost:8000/${item.image}`}  class="card-image" />
+              <a className="navbar-brand" href="/publicproduct">
+                <img src={`http://localhost:8000/${item.image}`}  class="card-image" />
+              </a>
             <div class="card-body">
                 <span><h5 class="card-title card-title-custom">{item.name}</h5></span>
                 <span><h5 class="card-text card-text-custom">Des :{item.description}</h5></span>
                 
                 {/* <h5 class="card-text">Category :{item.category_name}</h5> */}
+                {/* <a className="navbar-brand" href="/">
+                   <img src={logo} alt="Logo" className="navbar-logo" />
+                </a> */}
             </div>
             </div>
         </div>  
