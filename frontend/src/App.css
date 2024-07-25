@@ -106,9 +106,10 @@ html {
 .about-section {
   padding: 50px;
   text-align: center;
-  background-color: #474e5d;
+  background-color: Green;
   color: white;
 }
+/* #474e5d */
 
 .container {
   padding: 0 16px;
@@ -186,6 +187,29 @@ input[type=submit]:hover {
 }
 
 
+
+
+/* ReadMore.css */
+
+.read-more p {
+  display: inline;
+}
+
+.read-more .btn {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  margin-left: 5px;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px; /* Space between text and icon */
+}
+
+.read-more .btn:hover {
+  background-color: #0056b3;
+}
 
 
 
@@ -592,6 +616,7 @@ body {
   color: #fff;
   padding: 40px 0;
   font-family: Arial, sans-serif;
+  height: 350px;
 }
 
 .footer-top {
@@ -724,6 +749,7 @@ body {
 
 .vertical-slider-container {
   position: fixed;
+  height: 600px;
   left: 0;
   top: 0;
   bottom: 0;
