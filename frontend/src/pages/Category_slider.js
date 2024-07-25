@@ -64,7 +64,7 @@ const Category_slider = () => {
                         records.map((item) => (
                             <div className="col-lg-3 col-md-6 mb-1" key={item.id}>
                                 <div className="card" style={{ marginTop: '0px' }}>
-                                    <a className="navbar-brand" href="/publicproduct">
+                                    <a href="/publicproduct">
                                         <img
                                             src={`http://localhost:8000/${item.image}`}
                                             className="card-image"
