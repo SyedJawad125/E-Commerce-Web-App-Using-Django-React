@@ -60,7 +60,7 @@ const Category_vertical_slider = () => {
                         records.map((item) => (
                             <div className="slider-item-verticle" key={item.id}>
                                 <div className="card-verticle" style={{ marginTop: '0px' }}>
-                                    <a className="navbar-brand" href="/publicproduct">
+                                    <a href="/publicproduct">
                                         <img
                                             src={`http://localhost:8000/${item.image}`}
                                             className="card-image-verticle"
