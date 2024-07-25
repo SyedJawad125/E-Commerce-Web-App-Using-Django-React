@@ -31,7 +31,7 @@ const Services = () => {
 
           <div class="col-md-3 mb-3">
               <div class="card h-100">
-                <img src={img6} class="card-img-top" alt="Service 1" />
+                <img src={img4} class="card-img-top" alt="Service 1" />
                 <div class="card-body">
                   <h2>John Doe</h2>
                   <p class="title">Designer</p>
@@ -44,7 +44,7 @@ const Services = () => {
             
             <div class="col-md-3 mb-3">
               <div class="card h-100">
-                <img src={img6} class="card-img-top" alt="Service 1" />
+                <img src={img5} class="card-img-top" alt="Service 1" />
                 <div class="card-body">
                   <h2>John Doe</h2>
                   <p class="title">Designer</p>
