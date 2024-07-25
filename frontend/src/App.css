@@ -860,3 +860,26 @@ body {
   /* background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
   mix-blend-mode: multiply; */
 }
+
+
+
+.Category_slider_card {
+  border-radius: 15px;
+  overflow: hidden;
+  width: 200px;
+  border: 1px solid #ccc;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+
+}
+
+.Category_slider_card-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover; /* Ensures the image covers the entire area without stretching */
+}
+
+.Category_slider_card-img-top {
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  
+}
