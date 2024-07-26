@@ -51,7 +51,7 @@ const Category_slider = () => {
 
     return (
         <div className="container" style={{ marginBottom: '100px' ,  marginLeft: '200px'}}>
-            <h2 className="mt-4">List Of Categories </h2>
+            <h3 className="mt-4">Categories </h3>
             {/* <Link type="submit" className="btn btn-primary mt-3" to="/Add/Addcategory">
                 Add Category
             </Link> */}
