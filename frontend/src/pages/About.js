@@ -4,7 +4,8 @@ import img5 from '../images/5.jpg'
 import img6 from '../images/6.jpg'
 import Product_vertical_slider from './Category_vertical_slider';
 import Readmore from './Readmore';
-import '../App.css'
+import './About_Services_CSS.css';
+
 
 
 const Services = () => {
@@ -19,7 +20,7 @@ const Services = () => {
   return (
     <div class='container' style={{ marginTop: '15px', marginBottom: '100px', marginLeft: '200px',marginRight: '20px' }}>
                 
-      <div class="about-section">
+      <div class="about-section ">
           <h1>About Us</h1>
           <p>Some text about who we are and what we do.</p>
           <p>Resize the browser window to see that this page is responsive by the way.</p>
@@ -30,9 +31,9 @@ const Services = () => {
         <div class="row">
 
           <div class="col-md-3 mb-3">
-              <div class="card h-100">
-                <img src={img4} class="card-img-top" alt="Service 1" />
-                <div class="card-body">
+              <div class="card-about-service h-100">
+                <img src={img4} class="card-img-top-about-services" style={{ height: '200px' }} alt="Service 1" />
+                <div class="card-body-about-service">
                   <h2>John Doe</h2>
                   <p class="title">Designer</p>
                   <p>Some text that describes me lorem ipsum ipsum lorem.</p>
@@ -43,9 +44,9 @@ const Services = () => {
           </div>
             
             <div class="col-md-3 mb-3">
-              <div class="card h-100">
-                <img src={img5} class="card-img-top" alt="Service 1" />
-                <div class="card-body">
+              <div class="card-about-service h-100">
+                <img src={img5} class="card-img-top-about-services" style={{ height: '200px' }} alt="Service 1" />
+                <div class="card-body-about-service">
                   <h2>John Doe</h2>
                   <p class="title">Designer</p>
                   <p>Some text that describes me lorem ipsum ipsum lorem.</p>
@@ -56,9 +57,9 @@ const Services = () => {
             </div>
           
             <div class="col-md-3 mb-3">
-              <div class="card h-100">
-                <img src={img6} class="card-img-top" alt="Service 1" />
-                <div class="card-body">
+              <div class="card-about-service h-100">
+                <img src={img6} class="card-img-top-about-services" style={{ height: '200px' }}alt="Service 1" />
+                <div class="card-body-about-service">
                   <h2>John Doe</h2>
                   <p class="title">Designer</p>
                   <p>Some text that describes me lorem ipsum ipsum lorem.</p>
@@ -69,9 +70,9 @@ const Services = () => {
             </div>
 
             <div class="col-md-3 mb-3">
-              <div class="card h-100">
-                <img src={img6} class="card-img-top" alt="Service 1" />
-                <div class="card-body">
+              <div class="card-about-service h-100">
+                <img src={img6} class="card-img-top-about-services" style={{ height: '200px' }} alt="Service 1" />
+                <div class="card-body-about-service">
                   <h2>John Doe</h2>
                   <p class="title">Designer</p>
                   <p>Some text that describes me lorem ipsum ipsum lorem.</p>

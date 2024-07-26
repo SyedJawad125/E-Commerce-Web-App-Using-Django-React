@@ -410,6 +410,7 @@ button{
 }
 .card-body {
   text-align: center;
+  height: 75px;
 }
 .btn-custom {
   border-radius: 50px;
@@ -884,7 +885,7 @@ body {
   
 }
 
-/* CSS for cards shows in category, 6 cards in row */
+/* CSS for cards shows in Public Category page, 6 cards in row */
 .card-5 {
   border-radius: 15px;
   overflow: hidden;

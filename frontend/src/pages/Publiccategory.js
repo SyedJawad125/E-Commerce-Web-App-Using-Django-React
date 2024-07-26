@@ -52,15 +52,15 @@ const Publiccategory = () => {
               <a  href="/publicproduct">
                 <img src={`http://localhost:8000/${item.image}`}  class="card-image5" />
               </a>
-            <div class="card-body">
-                <span><h5 class="card-title card-title-custom">{item.name}</h5></span>
-                <span><p class="card-text card-text-custom" style={{ fontSize: '14px' }}>Des: {item.description}</p></span>
-                
-                {/* <h5 class="card-text">Category :{item.category_name}</h5> */}
-                {/* <a className="navbar-brand" href="/">
-                   <img src={logo} alt="Logo" className="navbar-logo" />
-                </a> */}
-            </div>
+                  <div class="card-body">
+                      <span><h5 class="card-title card-title-custom">{item.name}</h5></span>
+                      <span><p class="card-text card-text-custom" style={{ fontSize: '14px' }}>Des: {item.description}</p></span>
+                      
+                      {/* <h5 class="card-text">Category :{item.category_name}</h5> */}
+                      {/* <a className="navbar-brand" href="/">
+                        <img src={logo} alt="Logo" className="navbar-logo" />
+                      </a> */}
+                  </div>
             </div>
         </div>  
             
