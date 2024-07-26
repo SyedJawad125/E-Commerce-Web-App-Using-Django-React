@@ -61,7 +61,7 @@ const Product_vertical_slider = () => {
                             <div className="slider-item-verticle" key={item.id}>
                                 <div className="card-verticle" style={{ marginTop: '0px' }}>
                                     <img src={`http://localhost:8000/${item.image}`}
-                                         className="card-image-verticle"
+                                         className="card-image-verticle" style={{ height: '150px'}}
                                          alt={item.name} />
                                     <div className="card-body">
                                     <span><h5 class="card-title card-title-custom">{item.name}</h5></span>
