@@ -3,7 +3,9 @@ import {Link, useNavigate, useLocation} from 'react-router-dom'
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import axiosInstance from '../context/AxiosInstance';
-import '../App.css'
+// import '../App.css'
+import './Admin_card_css.css';
+
 
 const Category = () => {
 
@@ -76,11 +78,11 @@ const Category = () => {
         { records ? 
         records.map(item => (
         <div class="col-lg-3 col-md-6 mb-1">
-            <div class="card" >
-               <img src={`http://localhost:8000/${item.image}`}  class="card-image" />
-            <div class="card-body">
-                <h5 class="card-title card-title-custom">{item.name}</h5>
-                <h5 class="card-text card-text-custom">Des :{item.description}</h5>
+            <div class="admincard" >
+               <img src={`http://localhost:8000/${item.image}`}  class="admincard-image" />
+            <div class="admincard-body">
+                <h5 class="admincard-title card-title-custom">{item.name}</h5>
+                <h5 class="admincard-text card-text-custom">Des :{item.description}</h5>
                 {/* <h5 class="card-context">{item.created_by_name}</h5> */}
                 <button class='btn btn-danger'onClick={()=> deleteRecord(item.id)}>Delete</button>
                 <button class='btn btn-primary mx-2' onClick={()=> updateRecord(item)}>Update</button>
