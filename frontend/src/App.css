@@ -882,7 +882,10 @@ body {
 .Category_slider_card-img-top {
   border-top-left-radius: 15px;
   border-top-right-radius: 15px;
-  
+}
+.card-bodyslider {
+  text-align: center;
+  height: 35px;
 }
 
 /* CSS for cards shows in Public Category page, 6 cards in row */
@@ -901,5 +904,5 @@ body {
 
 .card-body5 {
   text-align: center;
-  height: 65px;
+  height: 55px;
 }

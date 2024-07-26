@@ -59,14 +59,14 @@ const Product_vertical_slider = () => {
                     {records ? (
                         records.map((item) => (
                             <div className="slider-item-verticle" key={item.id}>
-                                <div className="card-verticle" style={{ marginTop: '0px' }}>
+                                <div className="card-verticle" style={{ marginTop: '0px',marginBottom:'18px' }}>
                                     <img src={`http://localhost:8000/${item.image}`}
                                          className="card-image-verticle" style={{ height: '150px'}}
                                          alt={item.name} />
-                                    <div className="card-body" style={{height:'90px'}}>
-                                    <span><h5 class="card-text card-text-custom" style={{font :'10px'}}>{item.name}</h5></span>
+                                    <div className="card-body" style={{height:'90px', marginTop: '0px'}}>
+                                    <span><h5 class="card-text card-text-custom" style={{ fontSize: '12px' }}>{item.name}</h5></span>
                                     {/* <span><h5 class="card-text card-text-custom">Des :{item.description}</h5></span> */}
-                                    <span><h5 class="card-text card-text-custom">Price :{item.price}</h5></span>
+                                    <span><h5 class="card-text card-text-custom" style={{ fontSize: '15px' }}>Price :{item.price}</h5></span>
                                     </div>
                                 </div>
                             </div>
