@@ -80,9 +80,9 @@ const Category = () => {
         <div class="col-lg-3 col-md-6 mb-1">
             <div class="admincard" >
                <img src={`http://localhost:8000/${item.image}`}  class="admincard-image" />
-            <div class="admincard-body">
+            <div class="admincard-body-category">
                 <h5 class="admincard-title card-title-custom">{item.name}</h5>
-                <h5 class="admincard-text card-text-custom">Des :{item.description}</h5>
+                <h5 class="card-text card-text-custom">Des :{item.description}</h5>
                 {/* <h5 class="card-context">{item.created_by_name}</h5> */}
                 <button class='btn btn-danger'onClick={()=> deleteRecord(item.id)}>Delete</button>
                 <button class='btn btn-primary mx-2' onClick={()=> updateRecord(item)}>Update</button>

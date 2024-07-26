@@ -4,6 +4,8 @@
     width: 250px;
     border: 1px solid #ccc;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-top: 10px; /* Adjust as needed */
+    margin-bottom: 10px;
   
   }
   
@@ -11,6 +13,7 @@
     width: 100%;
     height: 200px;
     object-fit: cover; /* Ensures the image covers the entire area without stretching */
+    margin-bottom: 10px;
   }
   
   .admincard-img-top {
@@ -18,28 +21,39 @@
     border-top-right-radius: 15px;
     
   }
-  .admincard-body {
+  .admincard-body-category {
     text-align: center;
-    height: 125px;
+    height: 105px;
+  }
+  .admincard-body-product {
+    text-align: center;
+    height: 165px;
   }
   .btn-custom {
     border-radius: 50px;
   }
   
   
-  .admincard-title-custom {
+  .card-title-custom {
     font-family: 'Arial', sans-serif;
     font-weight: bold;
     color: #08203a;
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+    margin: 5px 0;
+    margin-left: 25px;
+
   }
   
-  .admincard-text-custom {
+  .card-text-custom {
     font-family: 'Georgia', serif;
     font-size: 1rem;
     color: #333;
     line-height: 1.6;
     text-align: justify;
+    margin: 5px 0;
+    margin-left: 25px;
+
+
   }
   
   .admincard {

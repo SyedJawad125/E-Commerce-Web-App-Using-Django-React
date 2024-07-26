@@ -52,7 +52,7 @@ const Publiccategory = () => {
               <a  href="/publicproduct">
                 <img src={`http://localhost:8000/${item.image}`}  class="card-image5" />
               </a>
-                  <div class="card-body">
+                  <div class="card-body5">
                       <span><h5 class="card-title card-title-custom">{item.name}</h5></span>
                       <span><p class="card-text card-text-custom" style={{ fontSize: '14px' }}>Des: {item.description}</p></span>
                       

@@ -30,7 +30,7 @@ const Services = () => {
 
   const text4 = `Discovering the latest additions to your favorite online store is always an exciting experience. 
    Explore New Arrivals is all about diving into the freshest trends, the newest products, and the most innovative items
-   that have just hit the shelves. Whether you’re looking for the latest fashion pieces, cutting-edge electronics, 
+   that have just hit the shelves. Whether you are looking for the latest fashion pieces, cutting-edge electronics, 
    or unique home decor, the new arrivals section is your gateway to staying ahead of the curve and keeping 
    your lifestyle up-to-date.`;
 

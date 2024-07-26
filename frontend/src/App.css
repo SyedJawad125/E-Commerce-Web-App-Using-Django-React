@@ -899,4 +899,7 @@ body {
   object-fit: cover; /* Ensures the image covers the entire area without stretching */
 }
 
-
+.card-body5 {
+  text-align: center;
+  height: 65px;
+}

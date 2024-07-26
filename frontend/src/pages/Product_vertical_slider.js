@@ -64,7 +64,7 @@ const Product_vertical_slider = () => {
                                          className="card-image-verticle" style={{ height: '150px'}}
                                          alt={item.name} />
                                     <div className="card-body" style={{height:'90px'}}>
-                                    <span><h5 class="card-title card-title-custom">{item.name}</h5></span>
+                                    <span><h5 class="card-text card-text-custom" style={{font :'10px'}}>{item.name}</h5></span>
                                     {/* <span><h5 class="card-text card-text-custom">Des :{item.description}</h5></span> */}
                                     <span><h5 class="card-text card-text-custom">Price :{item.price}</h5></span>
                                     </div>

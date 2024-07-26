@@ -90,13 +90,13 @@ const Product = () => {
         { records ? 
         records.map(item => (
         <div class="col-lg-3 col-md-6 mb-1">      
-            <div className="card" >
-                    <img src={`http://localhost:8000/${item.image}`}  class="card-image" />          
-            <div class="card-body">
-                <span><h5 class="card-title card-title-custom">Name :{item.name}</h5></span>
-                <span><h5 class="card-text card-text-custom">Des :{item.description}</h5></span>
-                <span><h5 class="card-text card-text-custom">Price :{item.price}</h5></span>
-                <h5 class="card-text card-text-custom">Category :{item.category_name}</h5>
+            <div className="admincard" >
+                    <img src={`http://localhost:8000/${item.image}`}  class="admincard-image" />          
+            <div class="admincard-body-product">
+                <span><h5 class="admincard-title card-title-custom">Name :{item.name}</h5></span>
+                <span><h5 class="admincard-text card-text-custom">Des :{item.description}</h5></span>
+                <span><h5 class="admincard-text card-text-custom">Price :{item.price}</h5></span>
+                <h5 class="admincard-text card-text-custom">Category :{item.category_name}</h5>
                 <button class='btn btn-danger'onClick={()=> deleteRecord(item.id)}>Delete</button>
                 <button class='btn btn-primary mx-2' onClick={()=> updateRecord(item)}>Update</button>
             </div>
