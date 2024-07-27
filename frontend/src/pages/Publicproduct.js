@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useLocation } from 'react-router-dom';
 import axiosInstance from '../context/AxiosInstance';
+import Category_vertical_slider from './Category_vertical_slider';
 import '../App.css';
 
 const PublicProduct = () => {
@@ -27,7 +28,7 @@ const PublicProduct = () => {
   }, [categoryId]);
 
   return (
-    <div className="container">
+    <div className="container" style={{ marginTop: '15px', marginBottom: '100px', marginLeft: '200px' }}>
       <h2>Products</h2>
       <div className="row">
         {products.length ? (
@@ -46,6 +47,8 @@ const PublicProduct = () => {
           <p>No products found for this category.</p>
         )}
       </div>
+      <Category_vertical_slider/>
+
     </div>
   );
 };

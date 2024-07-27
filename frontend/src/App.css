@@ -782,6 +782,9 @@ body {
   border: 1px solid #ccc;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
+.card-verticle:hover {
+  transform: scale(1.1);
+}
 .card-image-verticle {
   max-width: 100%;
   height: auto;
@@ -913,6 +916,9 @@ body {
 .card-body7 {
   text-align: center;
   height: 75px;
+}
+.card-5:hover {
+  transform: scale(1.1);
 }
 
 

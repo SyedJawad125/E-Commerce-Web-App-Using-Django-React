@@ -51,8 +51,7 @@ const Category_slider = () => {
     const handleCategoryClick = (categoryId) => {
         navigate('/publicproduct', { state: { categoryId: categoryId } });
       };
-    
-
+      
     return (
         <div className="container" style={{ marginBottom: '100px' ,  marginLeft: '200px'}}>
             <h3 className="mt-4">Categories </h3>
