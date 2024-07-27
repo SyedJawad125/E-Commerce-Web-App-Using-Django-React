@@ -253,6 +253,10 @@ input[type=submit]:hover {
   display: flex;
   align-items: center;
 }
+.navbar-links a.active {
+  color: black; /* Change to your desired color */
+  font-weight: lighter; /* Optional: make the text bold */
+}
 
 .dropdown {
   position: relative;
@@ -910,3 +914,5 @@ body {
   text-align: center;
   height: 75px;
 }
+
+

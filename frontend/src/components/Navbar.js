@@ -1,70 +1,90 @@
-import {React, useContext} from 'react'
-import {Link} from 'react-router-dom'
-import logo from '../images/logo5.jpg'
-
-// import { AuthCon } from '../context/AuthContext'
-import '../App.css'
+import React, { useState } from 'react';
+import { Link, useLocation } from 'react-router-dom';
+import logo from '../images/logo5.jpg';
+import '../App.css';
 
 const Navbar = () => {
-  // const {logout} = useContext(AuthCon)
+  const location = useLocation();
+  const [activeLink, setActiveLink] = useState(location.pathname);
+
+  const handleLinkClick = (path) => {
+    setActiveLink(path);
+  };
+
   return (
-    
     <nav className="navbar">
       <div className="navbar-brand">
         <a className="navbar-brand" href="/">
           <img src={logo} alt="Logo" className="navbar-logo" />
         </a>
-      {/* <Link to="/">E Commerce</Link> */}
       </div>
       <div className="navbar-links">
-        <Link to="/">Home</Link>
-        <Link to="/about">About</Link>
-        <Link to="/services">Services</Link>
-        <Link to="/publiccategory">Categories</Link>
-        <Link to="/publicproduct">Products</Link>
-        <Link to="/category_slider">Category_slider</Link>
-        {/* <Link to="/category_vertical_slider">Cate_vert_slider</Link> */}
-        <Link to="/product_vertical_slider">prod_vert_slider</Link>
-
-        {/* <Link to="/product">AdminPro</Link>
-        <Link to="/category">Admincate</Link> */}
-
-        <Link to="/check">Check</Link>
-
-
-        <Link to="/contact">Contact</Link>
-        {/* {
-                localStorage.getItem('token') ? <Link onClick={logout}>Logout</Link> : <Link to="/login">Login</Link>
-            } */}
-        {/* <div className="dropdown">
-          <button className="dropbtn">Dropdown</button>
-          <div className="dropdown-content">
-            <a href="#action/3.1">Action</a>
-            <a href="#action/3.2">Another action</a>
-            <a href="#action/3.3">Something</a>
-            <div className="dropdown-divider"></div>
-            <a href="#action/3.4">Separated link</a>
-          </div>
-        </div> */}
+        <Link
+          to="/"
+          className={activeLink === '/' ? 'active' : ''}
+          onClick={() => handleLinkClick('/')}
+        >
+          Home
+        </Link>
+        <Link
+          to="/about"
+          className={activeLink === '/about' ? 'active' : ''}
+          onClick={() => handleLinkClick('/about')}
+        >
+          About
+        </Link>
+        <Link
+          to="/services"
+          className={activeLink === '/services' ? 'active' : ''}
+          onClick={() => handleLinkClick('/services')}
+        >
+          Services
+        </Link>
+        <Link
+          to="/publiccategory"
+          className={activeLink === '/publiccategory' ? 'active' : ''}
+          onClick={() => handleLinkClick('/publiccategory')}
+        >
+          Categories
+        </Link>
+        <Link
+          to="/publicproduct"
+          className={activeLink === '/publicproduct' ? 'active' : ''}
+          onClick={() => handleLinkClick('/publicproduct')}
+        >
+          Products
+        </Link>
+        <Link
+          to="/category_slider"
+          className={activeLink === '/category_slider' ? 'active' : ''}
+          onClick={() => handleLinkClick('/category_slider')}
+        >
+          Category_slider
+        </Link>
+        <Link
+          to="/product_vertical_slider"
+          className={activeLink === '/product_vertical_slider' ? 'active' : ''}
+          onClick={() => handleLinkClick('/product_vertical_slider')}
+        >
+          prod_vert_slider
+        </Link>
+        <Link
+          to="/check"
+          className={activeLink === '/check' ? 'active' : ''}
+          onClick={() => handleLinkClick('/check')}
+        >
+          Check
+        </Link>
+        <Link
+          to="/contact"
+          className={activeLink === '/contact' ? 'active' : ''}
+          onClick={() => handleLinkClick('/contact')}
+        >
+          Contact
+        </Link>
       </div>
     </nav>
-  //   <div class="sidenav">
-  //       <Link to="/">Home</Link>
-  //       <Link to="/about">About</Link>
-  //       <Link to="/services">Services</Link>
-  //       <Link to="/category">Categories</Link>
-  //       <Link to="/product">Products</Link>
-  //       <Link to="/contact">Contact</Link>
-  //       {
-  //           localStorage.getItem('token') ? <Link onClick={logout}>Logout</Link> : <Link to="/login">Login</Link>
-  //       }
+  );
+};
 
-  //     <div class="main">
-  //         {/* <h2>Side Navbar Example</h2>
-  //         <p>This is an example of a side navigation bar.</p> */}
-  //     </div>
-  // </div>
-  )
-}
-
-export default Navbar
+export default Navbar;

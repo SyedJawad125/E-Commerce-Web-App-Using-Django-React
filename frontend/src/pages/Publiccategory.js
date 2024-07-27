@@ -40,7 +40,7 @@ const Publiccategory = () => {
         receiveData();
     },   [flag, location.state])
 
-
+//  data['order_bill'] = OrderSerializerList(instance.order).data if instance.order else None
 
 
   return (
@@ -52,7 +52,9 @@ const Publiccategory = () => {
         records.map(item => (
         <div class='col-lg-2 col-md-3 mb-4'>
             <div class="card-5" >
-            <Link  to={`/publicproduct/${item.id}`}>
+            <Link key={item.id} to={`/publicproduct?category=${item.id}`}>
+            {/* <a href={`/publicproduct?category=${item.id}`}> */}
+            {/* <Link to={`/publicproduct/:id/${item.id}`}> */}
                 <img src={`http://localhost:8000/${item.image}`}  class="card-image5" />
             </Link>
                   <div class="card-body5">
