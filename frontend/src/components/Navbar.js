@@ -48,9 +48,9 @@ const Navbar = () => {
           Categories
         </Link>
         <Link
-          to="/publicproduct"
-          className={activeLink === '/publicproduct' ? 'active' : ''}
-          onClick={() => handleLinkClick('/publicproduct')}
+          to="/allpublicproducts"
+          className={activeLink === '/allpublicproducts' ? 'active' : ''}
+          onClick={() => handleLinkClick('/allpublicproducts')}
         >
           Products
         </Link>

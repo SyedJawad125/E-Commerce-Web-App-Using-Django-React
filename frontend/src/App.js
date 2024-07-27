@@ -27,6 +27,7 @@ import Category_vertical_slider from './pages/Category_vertical_slider';
 import Product_vertical_slider from './pages/Product_vertical_slider';
 import Banner_slider from './pages/Banner_slider';
 import Readmore from './pages/Readmore';
+import Allpublicproducts from './pages/Allpublicproducts';
 // import Slider from 'react-slick';
 
 
@@ -36,7 +37,7 @@ function App() {
   const adminRoutes = ['/login', '/SignUp','/product','/Add/Addproduct','/Update/Updateproduct','/category',
     '/Add/Addcategory','/Update/Updatecategory', '/adminpage'];
   const publicRoutes = ['/','/about','/services','/publicproduct','/publiccategory','/check','/contact','/category_slider',
-    '/category_vertical_slider','/product_vertical_slider','/readmore','/login', '/SignUp'];
+    '/category_vertical_slider','/product_vertical_slider','/readmore','/allpublicproducts','/login', '/SignUp'];
 
   return (
     <div>
@@ -69,6 +70,7 @@ function App() {
             <Route path='/Add/Addproduct' element={<Addproduct/>}  />
             <Route path='/Update/Updateproduct' element={<Updateproduct/>}  />
             <Route path='/publicproduct' element={<Publicproduct/>}  />
+            <Route path='/allpublicproducts' element={<Allpublicproducts/>}  />
             <Route path='/category' element={<Category/>}  />
             <Route path='/Add/Addcategory' element={<Addcategory/>}  />
             <Route path='/Update/Updatecategory' element={<Updatecategory/>}  />
