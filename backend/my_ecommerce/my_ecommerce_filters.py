@@ -27,6 +27,7 @@ class PublicproductFilter(FilterSet):
     name = CharFilter(field_name='name', lookup_expr='icontains')
     price = CharFilter(field_name='price')
     description = CharFilter(field_name='description', lookup_expr='icontains')
+    category = CharFilter(field_name='prod_has_category')
 
     class Meta:
         model = Product

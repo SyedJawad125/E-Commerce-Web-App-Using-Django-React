@@ -101,10 +101,7 @@ const Product = () => {
                 <button class='btn btn-primary mx-2' onClick={()=> updateRecord(item)}>Update</button>
             </div>
             </div>
-        </div>  
-          
-
-            
+        </div>    
 )) : 
 <p>Loading....</p>
 }

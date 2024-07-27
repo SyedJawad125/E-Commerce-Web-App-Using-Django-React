@@ -40,6 +40,9 @@ const Publiccategory = () => {
         receiveData();
     },   [flag, location.state])
 
+
+
+
   return (
     <div class='container' style={{ marginTop: '15px', marginBottom: '100px',  marginLeft: '200px'}}>
     <div class="container mt-5">
@@ -49,11 +52,11 @@ const Publiccategory = () => {
         records.map(item => (
         <div class='col-lg-2 col-md-3 mb-4'>
             <div class="card-5" >
-              <a  href="/publicproduct">
+            <a href={`/publicproduct/${item.id}`}>
                 <img src={`http://localhost:8000/${item.image}`}  class="card-image5" />
               </a>
                   <div class="card-body5">
-                      <span><h5 class="card-title card-title-custom">{item.name}</h5></span>
+                      <span><h5 class="card-title card-title-custom" style={{ fontSize: '15px' }}>{item.name}</h5></span>
                       <span><p class="card-text card-text-custom" style={{ fontSize: '14px' }}>Des: {item.description}</p></span>
                       
                       {/* <h5 class="card-text">Category :{item.category_name}</h5> */}

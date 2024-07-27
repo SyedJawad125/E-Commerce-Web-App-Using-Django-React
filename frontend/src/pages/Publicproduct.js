@@ -1,5 +1,6 @@
 import {React, useEffect, useState} from 'react'
 import {Link, useNavigate, useLocation} from 'react-router-dom'
+import { useParams } from 'react-router-dom';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import axiosInstance from '../context/AxiosInstance';
@@ -11,9 +12,11 @@ const Publicproduct = () => {
     const navigate = useNavigate()
     const location = useLocation()
 
+    const { id } = useParams();
     const [records, setRecords] = useState([])
     const [data, setData] = useState([])
     const [flag, setFlag] = useState(false)
+    console.log('category id', id)
 
 
     useEffect(()=>{
@@ -27,7 +30,8 @@ const Publicproduct = () => {
           }
 
         const receiveData = async () =>{
-            const res = await axiosInstance.get('/ecommerce/publicproduct')
+            
+            const res = await axiosInstance.get(`/ecommerce/publicproduct?category=${id? id : ''}`, );
             try{
                 if (res){
                     setRecords(res.data.data.data)
@@ -39,7 +43,7 @@ const Publicproduct = () => {
             }
         }
         receiveData();
-    },   [flag, location.state])
+    },   [flag, location.state, id])
 
   return (
     <div class='container' style={{ marginTop: '15px', marginBottom: '100px',  marginLeft: '200px' }}>
@@ -48,15 +52,15 @@ const Publicproduct = () => {
         
         { records ? 
         records.map(item => (
-        <div class="col-lg-3 col-md-6 mb-1">
+        <div class="col-lg-2 col-md-3 mb-4">
 
-            <div class="card" >
-                    <img src={`http://localhost:8000/${item.image}`}  class="card-image" alt="Jane"  />                  
+            <div class="card-5" >
+                    <img src={`http://localhost:8000/${item.image}`}  class="card-image5" alt="Jane"  />                  
                      
-            <div class="card-body">
-                <span><h5 class="card-title card-title-custom">{item.name}</h5></span>
-                <span><h5 class="card-text card-text-custom">Des :{item.description}</h5></span>
-                <span><h5 class="card-text card-text-custom">Price :{item.price}</h5></span>
+            <div class="card-body7">
+                <span><h5 class="card-title card-title-custom" style={{ fontSize: '15px' }}>{item.name}</h5></span>
+                <span><h5 class="card-text card-text-custom" style={{ fontSize: '14px' }}>Des :{item.description}</h5></span>
+                <span><h5 class="card-text card-text-custom" style={{ fontSize: '14px' }}>Price :{item.price}</h5></span>
                 {/* <h5 class="card-text">Category :{item.category_name}</h5> */}
             </div>
             </div>
