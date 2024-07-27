@@ -919,6 +919,7 @@ body {
   height: 35px;
 }
 
+
 /* CSS for cards shows in Public Category page, 6 cards in row */
 .card-5 {
   border-radius: 15px;
@@ -947,3 +948,52 @@ body {
 
 
 
+/* CSS for Detail Page */
+
+/* Ensure the container takes full width and centers its content */
+.container_product_datail {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+/* Style the product detail section */
+.product-detail {
+  max-width: 800px;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  text-align: center;
+}
+
+/* Style the product image */
+.product-detail img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+/* Style the product name */
+.product-detail h1 {
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+/* Style the product description and price */
+.product-detail p {
+  font-size: 1.2rem;
+  color: #666;
+  margin: 10px 0;
+}
+
+/* Add some margin for the top and bottom of the page */
+.container_product_datail {
+  margin-top: 30px;
+  margin-bottom: 50px;
+}

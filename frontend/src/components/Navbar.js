@@ -12,10 +12,7 @@ const Navbar = () => {
   const handleLinkClick = (path) => {
     setActiveLink(path);
   };
-
-
   
-
   return (
     <nav className="navbar">
       <div className="navbar-brand">
