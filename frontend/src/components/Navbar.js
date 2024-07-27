@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import logo from '../images/logo5.jpg';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faShoppingCart } from '@fortawesome/free-solid-svg-icons';
 import '../App.css';
 
 const Navbar = () => {
@@ -10,6 +12,9 @@ const Navbar = () => {
   const handleLinkClick = (path) => {
     setActiveLink(path);
   };
+
+
+  
 
   return (
     <nav className="navbar">
@@ -68,13 +73,13 @@ const Navbar = () => {
         >
           prod_vert_slider
         </Link>
-        <Link
+        {/* <Link
           to="/check"
           className={activeLink === '/check' ? 'active' : ''}
           onClick={() => handleLinkClick('/check')}
         >
           Check
-        </Link>
+        </Link> */}
         <Link
           to="/contact"
           className={activeLink === '/contact' ? 'active' : ''}
@@ -82,9 +87,13 @@ const Navbar = () => {
         >
           Contact
         </Link>
+        <div className="navbar-cart">
+        <FontAwesomeIcon icon={faShoppingCart}  size="2x" style={{color: 'white'}}/>
+        <span className="cart-count">3</span> {/* Example: showing number of items in the cart */}
+      </div>
       </div>
     </nav>
   );
 };
 
-export default Navbar;
+export default Navbar; 
