@@ -30,7 +30,7 @@ const Publicproduct = () => {
           }
 
         const receiveData = async () =>{
-            
+            // In params
             const res = await axiosInstance.get(`/ecommerce/publicproduct?category=${id? id : ''}`, );
             try{
                 if (res){
