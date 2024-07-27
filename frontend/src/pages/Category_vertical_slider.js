@@ -50,6 +50,9 @@ const Category_vertical_slider = () => {
         autoplay: true,
         autoplaySpeed: 2000 // 2000ms = 2 seconds
     };
+    const handleCategoryClick = (categoryId) => {
+        navigate('/publicproduct', { state: { categoryId: categoryId } });
+      };
 
     return (
         <div className="vertical-slider-container">
@@ -59,13 +62,11 @@ const Category_vertical_slider = () => {
                     {records ? (
                         records.map((item) => (
                             <div className="slider-item-verticle" key={item.id}>
-                                <div className="card-verticle" style={{ marginTop: '0px' }}>
-                                    <a href="/publicproduct">
+                                <div className="card-verticle" style={{ marginTop: '0px' }} onClick={() => handleCategoryClick(item.id)}>                                   
                                         <img
                                             src={`http://localhost:8000/${item.image}`}
                                             className="card-image-verticle"
-                                            alt={item.name}/>
-                                    </a>    
+                                            alt={item.name}/>                                        
                                     {/* <div className="card-body">
                                         <h5 className="card-title card-title-custom">{item.name}</h5>
                                         <h5 className="card-text card-text-custom">Des: {item.description}</h5>
