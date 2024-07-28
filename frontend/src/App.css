@@ -956,6 +956,8 @@ body {
   justify-content: center;
   align-items: center;
   padding: 20px;
+  margin-top: 30px;
+  margin-bottom: 50px;
 }
 
 /* Style the product detail section */
@@ -972,8 +974,9 @@ body {
 
 /* Style the product image */
 .product-detail img {
-  max-width: 100%;
-  height: auto;
+  width: 300px; /* Set a specific width */
+  height: 300px; /* Set a specific height */
+  object-fit: cover; /* Maintain aspect ratio and cover the area */
   border-radius: 8px;
   margin-bottom: 20px;
 }
@@ -992,8 +995,6 @@ body {
   margin: 10px 0;
 }
 
-/* Add some margin for the top and bottom of the page */
-.container_product_datail {
-  margin-top: 30px;
-  margin-bottom: 50px;
+.product-detail:hover {
+  transform: scale(1.1);
 }

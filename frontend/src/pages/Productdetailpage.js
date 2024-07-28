@@ -44,7 +44,7 @@ const Productdetailpage = () => {
     if (!product) {
         return <p>Loading...</p>;
     }
-
+    
 return (
 <div className="container_product_datail" style={{ marginTop: '15px', marginBottom: '100px', marginLeft: '200px' }}>
         {product.length ? (

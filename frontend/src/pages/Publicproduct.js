@@ -1,11 +1,13 @@
 import React, { useEffect, useState } from 'react';
-import { useLocation } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 import axiosInstance from '../context/AxiosInstance';
 import Category_vertical_slider from './Category_vertical_slider';
 import '../App.css';
 
 const PublicProduct = () => {
   const location = useLocation();
+  const navigate = useNavigate();
+
   const { categoryId } = location.state || {};
 
   const [products, setProducts] = useState([]);
@@ -27,6 +29,9 @@ const PublicProduct = () => {
     }
   }, [categoryId]);
 
+  const handleProductClick = (ProductId) => {
+    navigate('/productdetailpage', { state: { ProductId: ProductId } });
+  };
   return (
     <div className="container" style={{ marginTop: '15px', marginBottom: '100px', marginLeft: '200px' }}>
       <h2>Products</h2>
@@ -35,7 +40,8 @@ const PublicProduct = () => {
           products.map((product) => (
             <div className="col-lg-3 col-md-4 mb-4" key={product.id}>
               <div className="card">
-                <img src={`http://localhost:8000/${product.image}`} className="card-img-top" alt={product.name} />
+                <img src={`http://localhost:8000/${product.image}`} className="card-img-top" alt={product.name}
+                onClick={() => handleProductClick(product.id)} />
                 <div className="card-body">
                   <h5 className="card-title">{product.name}</h5>
                   <p className="card-text">{product.description}</p>
