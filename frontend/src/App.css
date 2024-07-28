@@ -234,7 +234,7 @@ input[type=submit]:hover {
 
 .navbar a {
   color: white;
-  padding: 14px 20px;
+  padding: 8px 18px;
   text-decoration: none;
   text-align: center;
 }
@@ -540,6 +540,8 @@ body {
   z-index: 999;
   position: sticky;
   top: 0px; /* Adjust based on the height of your topbar */
+  padding: 3px 14px;
+
 }
 .left-content {
   /* Optional styling for the left content */
