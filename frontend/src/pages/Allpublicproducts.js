@@ -10,11 +10,11 @@ import '../App.css';
 const Allpublicproducts = () => {
     const navigate = useNavigate();
     const location = useLocation();
-    const { id } = useParams();
+    // const { id } = useParams();
     const [records, setRecords] = useState([]);
     const [data, setData] = useState([]);
     const [flag, setFlag] = useState(false);
-    console.log('category id', id);
+    // console.log('category id', id);
 
     useEffect(()=>{
         if (location.state && location.state.name){
@@ -37,7 +37,12 @@ const Allpublicproducts = () => {
             }
         };
         receiveData();
-    }, [flag, location.state, id]);
+    }, [flag, location.state]);
+     
+
+    const handleProductClick = (ProductId) => {
+        navigate('/productdetailpage', { state: { ProductId: ProductId } });
+      };
 
     return (
         <div className='container' style={{ marginTop: '15px', marginBottom: '100px', marginLeft: '200px' }}>
@@ -45,10 +50,10 @@ const Allpublicproducts = () => {
                 <div className="row">
                     {records ? records.map(item => (
                         <div className="col-lg-2 col-md-3 mb-4" key={item.id}>
-                            <div className="card-5">
-                                <Link to={`/productdetailpage/${item.id}`}>
+                            <div className="card-5" onClick={() => handleProductClick(item.id)}>
+                                {/* <Link to={'/productdetailpage', { state: { id: id } }}> */}
                                     <img src={`http://localhost:8000/${item.image}`} className="card-image5" alt="Jane" />
-                                </Link>
+                                {/* </Link> */}
                                 <div className="card-body7">
                                     <span><h5 className="card-title card-title-custom" style={{ fontSize: '15px' }}>{item.name}</h5></span>
                                     <span><h5 className="card-text card-text-custom" style={{ fontSize: '14px' }}>Des :{item.description}</h5></span>
