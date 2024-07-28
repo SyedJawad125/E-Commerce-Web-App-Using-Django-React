@@ -30,6 +30,7 @@ import Allpublicproducts from './pages/Allpublicproducts';
 import Productdetailpage from './pages/Productdetailpage';
 import AddToCartPage from './pages/AddToCartPage';
 import 'react-toastify/dist/ReactToastify.css';
+import Checkout from './pages/Checkout';
 
 function App() {
   const location = useLocation();
@@ -40,7 +41,7 @@ function App() {
   const publicRoutes = [
     '/', '/about', '/services', '/publicproduct', '/publiccategory', '/check', '/contact',
     '/category_slider', '/category_vertical_slider', '/product_vertical_slider', '/readmore',
-    '/allpublicproducts', '/login', '/SignUp', '/productdetailpage'
+    '/allpublicproducts','/addtocartpage', '/login', '/SignUp', '/productdetailpage','/checkout'
   ];
 
   return (
@@ -74,6 +75,7 @@ function App() {
           <Route path='/readmore' element={<Readmore />} />
           <Route path='/footer' element={<Footer />} />
           <Route path='/addtocartpage' element={<AddToCartPage />} />
+          <Route path='/checkout' element={<Checkout />} />
           <Route path='/check' element={<Check />} />
           <Route path='/contact' element={<Contact />} />
         </Routes>

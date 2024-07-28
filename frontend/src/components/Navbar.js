@@ -90,8 +90,8 @@ const Navbar = () => {
           Contact
         </Link>
         <div className="navbar-cart">
-        <button onClick={handleClick}>
-        <FontAwesomeIcon icon={faShoppingCart}  size="2x"/></button>
+        <a onClick={handleClick}>
+        <FontAwesomeIcon icon={faShoppingCart}  size="2x"/></a>
         <span className="cart-count">3</span> {/* Example: showing number of items in the cart */}
       </div>
       </div>

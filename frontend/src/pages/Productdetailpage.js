@@ -39,10 +39,10 @@ const Productdetailpage = () => {
     }
 
     return (
-        <div className="container_product_datail" style={{ marginTop: '15px', marginBottom: '100px', marginLeft: '200px' }}>
+        <div className="container_product_datail" style={{ marginTop: '5px', marginBottom: '100px', marginLeft: '200px' }}>
             {product.map((item) => (
                 <div key={item.id}>
-                    <div className='product-detail'>
+                    <div className='product-detail' >
                         <img src={`http://localhost:8000/${item.image}`} alt={item.name} />
                         <h1>{item.name}</h1>
                         <p>Description: {item.description}</p>
