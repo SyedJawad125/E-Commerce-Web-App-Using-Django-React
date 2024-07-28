@@ -45,22 +45,7 @@ const Productdetailpage = () => {
         return <p>Loading...</p>;
     }
 
-//     return (
-//         <div className='container_product_datail' style={{ marginTop: '15px', marginBottom: '100px', marginLeft: '200px' }}>
-//             <div className='product-detail'>
-//                 <img src={`http://localhost:8000/${product.image}`} alt={product.name} />
-//                 <h1>{product.name}</h1>
-//                 <p>Description: {product.description}</p>
-//                 <p>Price: {product.price}</p>
-//                 {/* Add other product details as needed */}
-//             </div>
-//         </div>
-//     );
-// };
-
-
 return (
-
 <div className="container_product_datail" style={{ marginTop: '15px', marginBottom: '100px', marginLeft: '200px' }}>
         {product.length ? (
           product.map((product) => (
