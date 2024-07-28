@@ -89,11 +89,15 @@ const Navbar = () => {
         >
           Contact
         </Link>
+
         <div className="navbar-cart">
-        <a onClick={handleClick}>
-        <FontAwesomeIcon icon={faShoppingCart}  size="2x"/></a>
-        <span className="cart-count">3</span> {/* Example: showing number of items in the cart */}
-      </div>
+          <Link to="/addtocartpage"  className={activeLink === '/addtocartpage' ? 'active' : ''}
+                onClick={() => handleLinkClick('/addtocartpage')}>
+            <FontAwesomeIcon icon={faShoppingCart} size="2x" />
+          </Link>
+         <span className="cart-count">3</span> {/* Example: showing number of items in the cart */}
+        </div>
+
       </div>
     </nav>
   );

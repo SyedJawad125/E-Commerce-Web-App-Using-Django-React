@@ -3,6 +3,8 @@ import CartContext from '../context/CartContext'
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { useNavigate } from 'react-router-dom';
+import '../App.css';
+
 
 const AddToCartPage = () => {
     const { cart, dispatch } = useContext(CartContext);
@@ -16,6 +18,9 @@ const AddToCartPage = () => {
     const handleProceedToCheckout = () => {
         // Navigate to checkout page or handle checkout logic
         navigate('/checkout');
+    };
+    const handleContinueShopping = () => {
+        navigate('/publiccategory'); // Redirect to the main product listing page
     };
 
     return (
@@ -39,6 +44,9 @@ const AddToCartPage = () => {
                     <div className="row">
                         <div className="col-12">
                             <button className="btn btn-success" onClick={handleProceedToCheckout}>Proceed to Checkout</button>
+                        
+                           <button type="button" className="btn btn-secondary" onClick={handleContinueShopping} 
+                                 style={{ marginLeft: '10px' }}>Continue Shopping</button>
                         </div>
                     </div>
                 )}
