@@ -85,17 +85,18 @@ const Navbar = () => {
           Contact
         </Link>
         <div className="navbar-cart">
-          <a onClick={handleClick}>
+        <Link to="/addtocartpage"  className={activeLink === '/addtocartpage' ? 'active' : ''}
+                onClick={() => handleLinkClick('/addtocartpage')}>
             <FontAwesomeIcon icon={faShoppingCart} size="2x" />
-          </a>
-          <span className="cart-count">{cart.length}</span> {/* Show number of items in the cart */}
+        </Link>
+            <span className="cart-count">{cart.length}</span> {/* Show number of items in the cart */}
         </div>
       </div>
     </nav>
   );
 };
-
 export default Navbar;
+
 
 
 
