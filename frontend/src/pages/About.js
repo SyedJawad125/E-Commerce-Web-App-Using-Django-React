@@ -18,6 +18,7 @@ const Services = () => {
   //   borderRadius: '8px'
   // };
   return (
+    // <div class='right-body'></div>
     <div class='container' style={{ marginTop: '15px', marginBottom: '100px', marginLeft: '200px',marginRight: '20px' }}>
                 
       <div class="about-service-section ">

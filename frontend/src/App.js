@@ -51,6 +51,11 @@ function App() {
         {!adminRoutes.includes(location.pathname) && <Navbar />}
         {!publicRoutes.includes(location.pathname) && <Admin_navbar />}
 
+        {/* <div class='left-body'> 
+            {!adminRoutes.includes(location.pathname) && <CardSlider />}
+
+        </div> */}
+
         <Routes>
           <Route path='/login' element={<Login />} />
           <Route path='/SignUp' element={<SignUp />} />
