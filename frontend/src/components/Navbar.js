@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Link, useLocation } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import logo from '../images/logo5.jpg';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faShoppingCart } from '@fortawesome/free-solid-svg-icons';
@@ -7,10 +7,15 @@ import '../App.css';
 
 const Navbar = () => {
   const location = useLocation();
+  const navigate = useNavigate();
   const [activeLink, setActiveLink] = useState(location.pathname);
 
   const handleLinkClick = (path) => {
     setActiveLink(path);
+  };
+
+  const handleClick = () => {
+    navigate('/addtocartpage');
   };
   
   return (
@@ -85,7 +90,8 @@ const Navbar = () => {
           Contact
         </Link>
         <div className="navbar-cart">
-        <FontAwesomeIcon icon={faShoppingCart}  size="2x" style={{color: 'white'}}/>
+        <button onClick={handleClick}>
+        <FontAwesomeIcon icon={faShoppingCart}  size="2x"/></button>
         <span className="cart-count">3</span> {/* Example: showing number of items in the cart */}
       </div>
       </div>
