@@ -193,7 +193,6 @@ export default Navbar;
 //           </Link>
 //           <span className="cart-count">3</span> {/* Example: showing number of items in the cart */}
 //         </div>
-
 //       </div>
 //     </nav>
 //   );
