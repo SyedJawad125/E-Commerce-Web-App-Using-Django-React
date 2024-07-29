@@ -7,11 +7,29 @@ const Container = styled.div`
   font-family: Arial, sans-serif;
 `;
 
-const Text = styled.p`
-  display: inline;
-  transition: max-height 0.5s ease;
+const ScrollableText = styled.div`
+  max-height: ${(props) => (props.isExpanded ? '200px' : '3em')}; /* Adjust the max-height as needed */
   overflow: hidden;
-  max-height: ${(props) => (props.isExpanded ? 'none' : '3em')};
+  transition: max-height 0.5s ease;
+  padding-right: ${(props) => (props.isExpanded ? '10px' : '0')};
+  overflow-y: ${(props) => (props.isExpanded ? 'scroll' : 'hidden')};
+  position: relative;
+
+  &::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: #888; 
+  }
+
+  &::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+  }
 `;
 
 const Button = styled.button`
@@ -20,7 +38,7 @@ const Button = styled.button`
   border: none;
   padding: 5px 10px;
   cursor: pointer;
-  margin-left: 50px;
+  margin-left: 10px;
   display: inline-flex;
   align-items: center;
   gap: 5px;
@@ -41,9 +59,9 @@ const Readmore = ({ text, maxLength = 100 }) => {
 
   return (
     <Container>
-      <Text isExpanded={isExpanded}>
+      <ScrollableText isExpanded={isExpanded}>
         {isExpanded ? text : `${text.substring(0, maxLength)}...`}
-      </Text>
+      </ScrollableText>
       <Button onClick={toggleReadMore}>
         {isExpanded ? (
           <>
