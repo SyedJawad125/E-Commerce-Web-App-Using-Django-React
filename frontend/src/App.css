@@ -726,7 +726,6 @@ body {
 /* rgb(101, 101, 223) */
 
 
-
 /* CSS for Cards Slider on the page src/Slider.js */
 
 .slider-container {
@@ -1078,5 +1077,73 @@ body {
   margin: 0;
   font-size: 14px;
 }
+/* Checkout CSS */
 
+.card-checkout {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 1.5rem;
+  width: 320px; /* Adjust the width as needed */
+  height: 120px; /* Adjust the height as needed */
+}
 
+.card-checkout img {
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.row.g-0 {
+  display: flex;
+  margin: 0;
+}
+
+.col-md-4 {
+  flex: 1 1 33.3333%;
+  max-width: 33.3333%;
+  padding: 0;
+}
+
+.col-md-8 {
+  flex: 1 1 66.6667%;
+  max-width: 66.6667%;
+  padding: 0;
+}
+
+.img-fluid {
+  width: 100%;
+  height: auto;
+  border-top-left-radius: 0.25rem;
+  border-bottom-left-radius: 0.25rem;
+}
+
+.card-body-checkout {
+  padding: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.card-title-checkout {
+  font-size: 1.25rem;
+  margin-bottom: 0.75rem;
+}
+
+.card-text-checkout {
+  margin-bottom: 0.5rem;
+}
+
+.text-muted {
+  color: #6c757d;
+}
+
+.top-right-button {
+  position: fixed;  /* Use 'absolute' if you want the button relative to a parent container */
+  top: 100px;  /* Adjust the distance from the top */
+  left: 250px;  /* Adjust the distance from the right */
+  z-index: 1000;  /* Ensure the button stays on top of other elements */
+}

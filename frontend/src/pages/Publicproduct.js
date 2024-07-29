@@ -32,8 +32,22 @@ const PublicProduct = () => {
   const handleProductClick = (ProductId) => {
     navigate('/productdetailpage', { state: { ProductId: ProductId } });
   };
+  const handleBackButton = () => {
+    navigate('/publiccategory'); // Redirect to the main product listing page
+};
   return (
     <div className="container" style={{ marginTop: '15px', marginBottom: '100px', marginLeft: '200px' }}>
+          <div className="row">
+              <div className="col-12">
+                  <button
+                  type="button"
+                  className="btn btn-secondary top-right-button"
+                  onClick={handleBackButton}
+                  >
+                  Goto Back
+                  </button>
+              </div>
+          </div>
       <h2>Products</h2>
       <div className="row">
         {products.length ? (

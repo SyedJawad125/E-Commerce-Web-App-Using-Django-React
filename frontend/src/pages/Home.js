@@ -12,26 +12,69 @@ import '../App.css'
 const Home = () => {
 
   return (
-    <div>
-        <Banner_slider/>
-      <div style={{ marginTop: '65px', marginBottom: '100px'}}>
-        <Category_slider />
-      </div>
-        <Category_vertical_slider/>
+    <div style={{ width:"100%", height:"100%" }}>
+        <div style={{ width:"100%", height:"100%" }}>
+          <Banner_slider/>
+        </div>
+        <div style={{width:"100%", height:"100%", display:"flex"}}>
+              <div style={{ width:"25%", height:"100%"}}>
+                 <Category_vertical_slider/>
+              </div>
+              <div style={{ width:"75%", height:"100%"}}>
+                 <Category_slider />
+              </div>
+        </div>
     </div>
-
-      
-    // <div className="main-layout">
-    //     <Banner_slider />
-    //     <div className="content-with-sidebar">
-    //         <Category_vertical_slider />
-    //         <div className="main-content">
-    //             {/* Your main content goes here */}
-    //         </div>
-    //     </div>
-    //     <Footer />
-    // </div>
   )
 }
       
 export default Home
+
+{/* <div style={{
+width:"100%".
+height:"100%".
+}}>
+
+<div style={{
+width:"100%".
+height:"100%".
+}}>
+navebar 1
+</div>
+
+<div style={{
+width:"100%".
+height:"100%".
+}}>
+navebar 2
+</div>
+//Body +side bar
+<div style={{
+width:"100%".
+height:"100%".
+display:"flex"
+}}>
+<div style={{
+width:"25%".
+height:"100%".
+}}>
+sidebar
+</div >
+<div  style={{
+width:"75%".
+height:"100%".
+
+}}>
+item display body
+</div>
+
+</div>
+
+<div style={{
+width:"100%".
+height:"100%".
+}}>
+fotter
+</div>
+
+</div> */}

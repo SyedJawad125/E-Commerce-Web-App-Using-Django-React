@@ -1,5 +1,5 @@
 import React, { useEffect, useState, useContext } from 'react';
-import { useLocation } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 import axiosInstance from '../context/AxiosInstance';
 import Category_vertical_slider from './Category_vertical_slider';
 import CartContext from '../context/CartContext';
@@ -9,6 +9,7 @@ import '../App.css';
 
 const Productdetailpage = () => {
     const location = useLocation();
+    const navigate = useNavigate();
     const { ProductId } = location.state || {};
     const [product, setProduct] = useState([]);
     const { dispatch } = useContext(CartContext);
@@ -37,9 +38,22 @@ const Productdetailpage = () => {
     if (!product.length) {
         return <p>Loading...</p>;
     }
-
+    const handleBackButton = () => {
+        navigate('/publiccategory'); // Redirect to the main product listing page
+    };
     return (
         <div className="container_product_datail" style={{ marginTop: '5px', marginBottom: '100px', marginLeft: '200px' }}>
+            <div className="row">
+                <div className="col-12">
+                    <button
+                    type="button"
+                    className="btn btn-secondary top-right-button"
+                    onClick={handleBackButton}
+                    >
+                    Goto Back
+                    </button>
+                </div>
+            </div>
             {product.map((item) => (
                 <div key={item.id}>
                     <div className='product-detail' >
