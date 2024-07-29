@@ -2,15 +2,21 @@ import React, { useState, useContext } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import logo from '../images/logo5.jpg';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faShoppingCart } from '@fortawesome/free-solid-svg-icons';
-import CartContext from '../context/CartContext'; // Import CartContext
+import { faShoppingCart } from '@fortawesome/free-solid-svg-icons';  
+import CartContext from '../context/CartContext';
+// import Tooltip from '../components/Tooltip'; 
+import HoverBox from './HoverBox';
+import img1 from '../images/1.jpg'
+import img2 from '../images/2.jpg'
 import '../App.css';
 
 const Navbar = () => {
   const location = useLocation();
   const navigate = useNavigate();
   const [activeLink, setActiveLink] = useState(location.pathname);
-  const { cart } = useContext(CartContext); // Use useContext to access cart
+  const { cart } = useContext(CartContext);
+  // const [showTooltip, setShowTooltip] = useState(false); 
+  const [hovering, setHovering] = useState(false);
 
   const handleLinkClick = (path) => {
     setActiveLink(path);
@@ -19,6 +25,18 @@ const Navbar = () => {
   const handleClick = () => {
     navigate('/addtocartpage');
   };
+
+  // const handleMouseEnter = () => {
+  //   setShowTooltip(true);
+  // };
+
+  // const handleMouseLeave = () => {
+  //   setShowTooltip(false);
+  // };
+  const sampleProducts = [
+    { id: 1, img1: '1.jpg', name: 'Product 1' },
+    { id: 2, img2: '2.jpg', name: 'Product 2' },
+  ];
 
   return (
     <nav className="navbar">
@@ -63,13 +81,6 @@ const Navbar = () => {
         >
           Products
         </Link>
-        {/* <Link
-          to="/category_slider"
-          className={activeLink === '/category_slider' ? 'active' : ''}
-          onClick={() => handleLinkClick('/category_slider')}
-        >
-          Category_slider
-        </Link> */}
         <Link
           to="/product_vertical_slider"
           className={activeLink === '/product_vertical_slider' ? 'active' : ''}
@@ -84,6 +95,26 @@ const Navbar = () => {
         >
           Contact
         </Link>
+        
+        <div
+          className="navbar-check"
+          // onMouseEnter={handleMouseEnter}
+          // onMouseLeave={handleMouseLeave}
+          onMouseEnter={() => setHovering(true)}
+          onMouseLeave={() => setHovering(false)}
+          >
+            
+          <Link
+            to="/allpublicproducts"
+            className={activeLink === '/allpublicproducts' ? 'active' : ''}
+            onClick={() => handleLinkClick('/allpublicproducts')}>
+            CheckBox
+          </Link>
+          
+          {hovering && <HoverBox products={sampleProducts} />} {/* Show tooltip when showTooltip is true */}
+        </div>
+
+
         <div className="navbar-cart">
         <Link to="/addtocartpage"  className={activeLink === '/addtocartpage' ? 'active' : ''}
                 onClick={() => handleLinkClick('/addtocartpage')}>
@@ -95,6 +126,7 @@ const Navbar = () => {
     </nav>
   );
 };
+
 export default Navbar;
 
 
@@ -103,17 +135,23 @@ export default Navbar;
 
 
 
-// import React, { useState } from 'react';
+
+
+
+
+// import React, { useState, useContext } from 'react';
 // import { Link, useLocation, useNavigate } from 'react-router-dom';
 // import logo from '../images/logo5.jpg';
 // import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 // import { faShoppingCart } from '@fortawesome/free-solid-svg-icons';
+// import CartContext from '../context/CartContext'; // Import CartContext
 // import '../App.css';
 
 // const Navbar = () => {
 //   const location = useLocation();
 //   const navigate = useNavigate();
 //   const [activeLink, setActiveLink] = useState(location.pathname);
+//   const { cart } = useContext(CartContext); // Use useContext to access cart
 
 //   const handleLinkClick = (path) => {
 //     setActiveLink(path);
@@ -122,7 +160,7 @@ export default Navbar;
 //   const handleClick = () => {
 //     navigate('/addtocartpage');
 //   };
-  
+
 //   return (
 //     <nav className="navbar">
 //       <div className="navbar-brand">
@@ -134,74 +172,71 @@ export default Navbar;
 //         <Link
 //           to="/"
 //           className={activeLink === '/' ? 'active' : ''}
-//           onClick={() => handleLinkClick('/')}>
+//           onClick={() => handleLinkClick('/')}
+//         >
 //           Home
 //         </Link>
 //         <Link
 //           to="/about"
 //           className={activeLink === '/about' ? 'active' : ''}
-//           onClick={() => handleLinkClick('/about')}>
+//           onClick={() => handleLinkClick('/about')}
+//         >
 //           About
 //         </Link>
 //         <Link
 //           to="/services"
 //           className={activeLink === '/services' ? 'active' : ''}
-//           onClick={() => handleLinkClick('/services')}>
+//           onClick={() => handleLinkClick('/services')}
+//         >
 //           Services
 //         </Link>
 //         <Link
 //           to="/publiccategory"
 //           className={activeLink === '/publiccategory' ? 'active' : ''}
-//           onClick={() => handleLinkClick('/publiccategory')}>
+//           onClick={() => handleLinkClick('/publiccategory')}
+//         >
 //           Categories
 //         </Link>
 //         <Link
 //           to="/allpublicproducts"
 //           className={activeLink === '/allpublicproducts' ? 'active' : ''}
-//           onClick={() => handleLinkClick('/allpublicproducts')}>
+//           onClick={() => handleLinkClick('/allpublicproducts')}
+//         >
 //           Products
 //         </Link>
-//         <Link
+//         {/* <Link
 //           to="/category_slider"
 //           className={activeLink === '/category_slider' ? 'active' : ''}
-//           onClick={() => handleLinkClick('/category_slider')}>
+//           onClick={() => handleLinkClick('/category_slider')}
+//         >
 //           Category_slider
-//         </Link>
+//         </Link> */}
 //         <Link
 //           to="/product_vertical_slider"
 //           className={activeLink === '/product_vertical_slider' ? 'active' : ''}
-//           onClick={() => handleLinkClick('/product_vertical_slider')}>
+//           onClick={() => handleLinkClick('/product_vertical_slider')}
+//         >
 //           prod_vert_slider
 //         </Link>
-//         {/* <Link
-//           to="/check"
-//           className={activeLink === '/check' ? 'active' : ''}
-//           onClick={() => handleLinkClick('/check')}
-//         >
-//           Check
-//         </Link> */}
 //         <Link
 //           to="/contact"
 //           className={activeLink === '/contact' ? 'active' : ''}
-//           onClick={() => handleLinkClick('/contact')}>
+//           onClick={() => handleLinkClick('/contact')}
+//         >
 //           Contact
 //         </Link>
 //         <div className="navbar-cart">
-//           <Link to="/addtocartpage"  className={activeLink === '/addtocartpage' ? 'active' : ''}
+//         <Link to="/addtocartpage"  className={activeLink === '/addtocartpage' ? 'active' : ''}
 //                 onClick={() => handleLinkClick('/addtocartpage')}>
 //             <FontAwesomeIcon icon={faShoppingCart} size="2x" />
-//           </Link>
-//           <span className="cart-count">3</span> {/* Example: showing number of items in the cart */}
+//         </Link>
+//             <span className="cart-count">{cart.length}</span> {/* Show number of items in the cart */}
 //         </div>
 //       </div>
 //     </nav>
 //   );
 // };
-
-// export default Navbar; 
-
+// export default Navbar;
 
 
 
-{/* <img src={`http://localhost:8000/${product.image}`} className="card-img-top" alt={product.name}
-                onClick={() => handleProductClick(product.id)} /> */}

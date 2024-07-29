@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import img1 from '../images/1.jpg'
+import img2 from '../images/2.jpg'
 
 const NavbarWithHover = () => {
   const [showSmallScreen, setShowSmallScreen] = useState(false);
@@ -36,11 +38,11 @@ const NavbarWithHover = () => {
           onMouseLeave={handleMouseLeave}
         >
           <div style={{ display: 'flex', alignItems: 'center' }}>
-            <img src="image1.jpg" alt="Product 1" style={{ width: '50px', height: '50px', marginRight: '10px' }} />
+            <img src={img1} alt="Product 1" style={{ width: '50px', height: '50px', marginRight: '10px' }} />
             <span>Product Name 1</span>
           </div>
           <div style={{ display: 'flex', alignItems: 'center', marginTop: '10px' }}>
-            <img src="image2.jpg" alt="Product 2" style={{ width: '50px', height: '50px', marginRight: '10px' }} />
+            <img src={img2} alt="Product 2" style={{ width: '50px', height: '50px', marginRight: '10px' }} />
             <span>Product Name 2</span>
           </div>
         </div>

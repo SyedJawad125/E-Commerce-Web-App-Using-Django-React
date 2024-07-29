@@ -1043,3 +1043,40 @@ body {
 .clickable-image {
   cursor: pointer;
 }
+
+
+
+/* Tooltip.css */
+.tooltip-container {
+  position: absolute;
+  top: 60px; /* Adjust as needed */
+  right: 0; /* Adjust as needed */
+  background-color: white;
+  border: 1px solid #ccc;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  z-index: 1000;
+}
+
+.tooltip-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.tooltip-item:last-child {
+  margin-bottom: 0;
+}
+
+.tooltip-image {
+  width: 50px; /* Adjust size as needed */
+  height: 50px; /* Adjust size as needed */
+  margin-right: 10px;
+}
+
+.tooltip-item p {
+  margin: 0;
+  font-size: 14px;
+}
+
+
