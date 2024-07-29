@@ -50,7 +50,9 @@ const Product_vertical_slider = () => {
         autoplay: true,
         autoplaySpeed: 2000 // 2000ms = 2 seconds
     };
-
+    const handleProductClick = (ProductId) => {
+        navigate('/productdetailpage', { state: { ProductId: ProductId } });
+      };
     return (
         <div className="vertical-slider-container">
             <h2 className="mt-4">Products </h2>
@@ -59,9 +61,10 @@ const Product_vertical_slider = () => {
                     {records ? (
                         records.map((item) => (
                             <div className="slider-item-verticle" key={item.id}>
-                                <div className="card-verticle" style={{ marginTop: '0px',marginBottom:'18px' }}>
+                                <div className="card-verticle"  onClick={() => handleProductClick(item.id)}
+                                          style={{ marginTop: '0px',marginBottom:'18px' }}>
                                     <img src={`http://localhost:8000/${item.image}`}
-                                         className="card-image-verticle" style={{ height: '150px'}}
+                                         className="card-image-verticle clickable-image" style={{ height: '150px'}}
                                          alt={item.name} />
                                     <div className="card-body" style={{height:'90px', marginTop: '0px'}}>
                                     <span><h5 class="card-text card-text-custom" style={{ fontSize: '12px' }}>{item.name}</h5></span>

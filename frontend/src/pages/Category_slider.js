@@ -70,7 +70,7 @@ const Category_slider = () => {
                                       style={{ marginTop: '0px', marginBottom:'30px' }}>  
                                     <img
                                         src={`http://localhost:8000/${item.image}`}
-                                        className="Category_slider_card-image"
+                                        className="Category_slider_card-image clickable-image"
                                         alt={item.name}/>
                                     <div className="card-bodyslider" style={{ marginTop: '10px'}}>
                                         <h5 className="card-title card-title-custom">{item.name}</h5>

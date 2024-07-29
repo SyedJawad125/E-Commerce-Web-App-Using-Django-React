@@ -65,7 +65,7 @@ const Category_vertical_slider = () => {
                                 <div className="card-verticle" style={{ marginTop: '0px' }} onClick={() => handleCategoryClick(item.id)}>                                   
                                         <img
                                             src={`http://localhost:8000/${item.image}`}
-                                            className="card-image-verticle"
+                                            className="card-image-verticle clickable-image"
                                             alt={item.name}/>                                        
                                     {/* <div className="card-body">
                                         <h5 className="card-title card-title-custom">{item.name}</h5>
