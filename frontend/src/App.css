@@ -1039,3 +1039,7 @@ body {
   border-color: #6c757d;
   color: #fff;
 }
+
+.clickable-image {
+  cursor: pointer;
+}

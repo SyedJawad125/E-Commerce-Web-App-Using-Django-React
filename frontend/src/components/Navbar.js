@@ -63,13 +63,13 @@ const Navbar = () => {
         >
           Products
         </Link>
-        <Link
+        {/* <Link
           to="/category_slider"
           className={activeLink === '/category_slider' ? 'active' : ''}
           onClick={() => handleLinkClick('/category_slider')}
         >
           Category_slider
-        </Link>
+        </Link> */}
         <Link
           to="/product_vertical_slider"
           className={activeLink === '/product_vertical_slider' ? 'active' : ''}
@@ -199,3 +199,9 @@ export default Navbar;
 // };
 
 // export default Navbar; 
+
+
+
+
+{/* <img src={`http://localhost:8000/${product.image}`} className="card-img-top" alt={product.name}
+                onClick={() => handleProductClick(product.id)} /> */}

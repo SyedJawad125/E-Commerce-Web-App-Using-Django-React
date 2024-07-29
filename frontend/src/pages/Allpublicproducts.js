@@ -52,7 +52,7 @@ const Allpublicproducts = () => {
                         <div className="col-lg-2 col-md-3 mb-4" key={item.id}>
                             <div className="card-5" onClick={() => handleProductClick(item.id)}>
                                 {/* <Link to={'/productdetailpage', { state: { id: id } }}> */}
-                                    <img src={`http://localhost:8000/${item.image}`} className="card-image5" alt="Jane" />
+                                   <img src={`http://localhost:8000/${item.image}`} className="card-image5 clickable-image" alt="Jane"/>
                                 {/* </Link> */}
                                 <div className="card-body7">
                                     <span><h5 className="card-title card-title-custom" style={{ fontSize: '15px' }}>{item.name}</h5></span>

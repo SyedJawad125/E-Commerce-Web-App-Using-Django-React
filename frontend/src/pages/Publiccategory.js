@@ -49,9 +49,7 @@ const Publiccategory = () => {
             records.map((item) => (
               <div className="col-lg-2 col-md-3 mb-4" key={item.id}>
                 <div className="card-5" onClick={() => handleCategoryClick(item.id)}>
-                <Link to={`/category/${item.id}`} className="card-5">
-                   <img src={`http://localhost:8000/${item.image}`} className="card-image5" alt={item.name} />
-                </Link>
+                   <img src={`http://localhost:8000/${item.image}`} className="card-image5 clickable-image" alt={item.name} />
                   <div className="card-body5">
                     <h5 className="card-title card-title-custom" style={{ fontSize: '15px' }}>
                       {item.name}

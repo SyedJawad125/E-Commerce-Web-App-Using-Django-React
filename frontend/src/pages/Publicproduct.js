@@ -39,9 +39,9 @@ const PublicProduct = () => {
         {products.length ? (
           products.map((product) => (
             <div className="col-lg-3 col-md-4 mb-4" key={product.id}>
-              <div className="card">
-                <img src={`http://localhost:8000/${product.image}`} className="card-img-top" alt={product.name}
-                onClick={() => handleProductClick(product.id)} />
+              <div className="card" onClick={() => handleProductClick(product.id)}>
+                <img src={`http://localhost:8000/${product.image}`} className="card-img-top clickable-image" alt={product.name}
+                 />
                 <div className="card-body">
                   <h5 className="card-title">{product.name}</h5>
                   <p className="card-text">{product.description}</p>
