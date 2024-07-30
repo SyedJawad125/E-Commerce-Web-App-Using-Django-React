@@ -37,7 +37,7 @@ const PublicProduct = () => {
 };
   return (
     <div className="container" style={{ marginTop: '15px', marginBottom: '100px', marginLeft: '200px' }}>
-          <div className="row">
+          <div className="row" style={{marginBottom:'50px'}}>
               <div className="col-12">
                   <button
                   type="button"

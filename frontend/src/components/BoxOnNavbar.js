@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import img1 from '../images/1.jpg'
-import img2 from '../images/2.jpg'
+import img1 from '../images/1.jpg';
+import img2 from '../images/2.jpg';
 
 const NavbarWithHover = () => {
   const [showSmallScreen, setShowSmallScreen] = useState(false);
@@ -12,6 +12,9 @@ const NavbarWithHover = () => {
   const handleMouseLeave = () => {
     setShowSmallScreen(false);
   };
+
+  console.log('Image 1 path:', img1);
+  console.log('Image 2 path:', img2);
 
   return (
     <div style={{ position: 'relative' }}>
@@ -52,3 +55,4 @@ const NavbarWithHover = () => {
 };
 
 export default NavbarWithHover;
+

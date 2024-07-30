@@ -1,19 +1,71 @@
-// HoverBox.js
 import React from 'react';
-import '../components/HoverBox.css';
-
+import img1 from '../images/1.jpg';
+import img2 from '../images/2.jpg';
 
 const HoverBox = ({ products }) => {
   return (
-    <div className="hover-box">
-      {products.map((product) => (
-        <div key={product.id} className="hover-box-item">
-          <img src={`http://localhost:8000/${product.image}`} alt={product.name} className="hover-box-image" />
-          <p className="hover-box-name">{product.name}</p>
-        </div>
-      ))}
+    <div 
+      style={{
+        position: 'absolute', 
+        top: '100%', 
+        left: '0', 
+        backgroundColor: 'white', 
+        border: '1px solid #ccc', 
+        padding: '10px', 
+        boxShadow: '0 2px 10px rgba(0,0,0,0.1)',
+        zIndex: 1,
+        marginTop: '5px'
+      }}
+    >
+      <div style={{ display: 'flex', flexDirection: 'row', gap: '10px' }}>
+        {products.map(product => (
+          <div key={product.id} style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+            <img 
+              src={product.img1 === '1.jpg' ? img1 : img2} 
+              alt={product.name} 
+              style={{ width: '100px', height: '100px', marginBottom: '5px' }} 
+            />
+            <span>{product.name}</span>
+          </div>
+        ))}
+      </div>
     </div>
   );
 };
 
 export default HoverBox;
+
+
+
+// import React from 'react';
+// import img1 from '../images/1.jpg';
+// import img2 from '../images/2.jpg';
+
+// const HoverBox = ({ products }) => {
+//   return (
+//     <div 
+//       style={{
+//         position: 'absolute', 
+//         top: '100%', 
+//         left: '0', 
+//         backgroundColor: 'white', 
+//         border: '1px solid #ccc', 
+//         padding: '10px', 
+//         boxShadow: '0 2px 10px rgba(0,0,0,0.1)',
+//         zIndex: 1,
+//         marginTop: '5px'
+//       }}
+//     >
+//       <div style={{ display: 'flex', flexDirection: 'row', gap: '10px' }}>
+//         {products.map(product => (
+//           <div key={product.id} style={{ display: 'flex', alignItems: 'center' }}>
+//             <img src={product.img1 === '1.jpg' ? img1 : img2} alt={product.name} style={{ width: '100px', height: '100px', margin: '10px' }} />
+//             <span>{product.name}</span>
+//           </div>
+//         ))}
+//       </div>
+//     </div>
+//   );
+// };
+
+// export default HoverBox;

@@ -20,7 +20,7 @@ const Home = () => {
               <div style={{ width:"25%", height:"100%"}}>
                  <Category_vertical_slider/>
               </div>
-              <div style={{ width:"75%", height:"100%"}}>
+              <div style={{ width:"100%", height:"100%", marginTop:'25px'}}>
                  <Category_slider />
               </div>
         </div>

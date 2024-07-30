@@ -98,22 +98,20 @@ const Navbar = () => {
         
         <div
           className="navbar-check"
-          // onMouseEnter={handleMouseEnter}
-          // onMouseLeave={handleMouseLeave}
           onMouseEnter={() => setHovering(true)}
           onMouseLeave={() => setHovering(false)}
-          >
-            
+          style={{ position: 'relative' }}
+        >
           <Link
             to="/allpublicproducts"
             className={activeLink === '/allpublicproducts' ? 'active' : ''}
-            onClick={() => handleLinkClick('/allpublicproducts')}>
+            onClick={() => handleLinkClick('/allpublicproducts')}
+          >
             CheckBox
           </Link>
           
-          {hovering && <HoverBox products={sampleProducts} />} {/* Show tooltip when showTooltip is true */}
+          {hovering && <HoverBox products={sampleProducts} />} 
         </div>
-
 
         <div className="navbar-cart">
         <Link to="/addtocartpage"  className={activeLink === '/addtocartpage' ? 'active' : ''}
