@@ -1,0 +1,127 @@
+/* Container */
+.container-log {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #f3ec78, #af4261);
+    padding: 20px;
+}
+
+/* Row */
+.row {
+    width: 100%;
+}
+
+/* Card */
+.cards-log {
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+/* Card Header */
+.card-header-log {
+    background: #af4261;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+.card-header-log h3 {
+    margin: 0;
+}
+
+/* Card Body */
+.card-bodies-log {
+    padding: 20px;
+}
+
+.mb-3-log {
+    margin-bottom: 15px;
+}
+
+/* Form Labels */
+.form-label-log {
+    display: block;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+/* Textbox */
+.textbox-log {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.textbox-log:focus {
+    border-color: #af4261;
+    outline: none;
+}
+
+/* Form Text */
+.form-text-log {
+    font-size: 0.875em;
+    color: #666;
+}
+
+/* Button */
+.btn {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.btn-primary {
+    background: #af4261;
+    color: white;
+}
+
+.btn-primary:hover {
+    background: #f3ec78;
+    color: #af4261;
+}
+
+.btn-primary:active {
+    transform: scale(0.98);
+}
+
+/* Call to Action */
+.call-to-action-log {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.right-button-log {
+    background: transparent;
+    border: 2px solid #af4261;
+    color: #af4261;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s, color 0.3s;
+}
+
+.right-button-log:hover {
+    background: #af4261;
+    color: white;
+}
+
+.right-button-log:active {
+    transform: scale(0.98);
+}
+
+/* Card Footer */
+.card-footer-log {
+    background: #f3ec78;
+    color: #333;
+    padding: 10px;
+    text-align: center;
+}

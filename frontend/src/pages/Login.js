@@ -4,7 +4,9 @@ import axiosInstance from '../context/AxiosInstance'
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { AuthCon } from '../context/AuthContext';
-import '../App.css'
+// import '../App.css'
+import './Login.css'
+
 
 const Login = () => {
     const location = useLocation()
@@ -54,27 +56,27 @@ const Login = () => {
     };
 
   return (
-    <div class="container" >
-    <div class="row justify-content-center">
+    <div class="container-log" >
+    <div class="row justify-content-center-log">
         <div class="col-md-5">
-            <div class="cards mt-5">
-                <div class="card-header">
-                    <h3 class="text-center">Login</h3>
+            <div class="cards-log mt-5">
+                <div class="card-header-log">
+                    <h3 class="text-center-log">Login</h3>
                 </div>
-                <div class="card-bodies" >
+                <div class="card-bodies-log" >
                     <form onSubmit={handleSubmit}>
-                        <div class="mb-3">
-                            <label for="username" class="form-label">User Name</label>
+                        <div class="mb-3-log">
+                            <label for="username" class="form-label-log">User Name</label>
                             {/* <input type="text" style={textboxStyle} id="username" aria-describedby="emailHelp" required value={username}
                               onChange= {e => setUsername(e.target.value)}/> */}
                               <input type="text" value={username} onChange= {e => setUsername(e.target.value)} placeholder="Enter Username"
-                                class="textbox"/>
+                                class="textbox-log"/>
       
-                            <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                            <div id="emailHelp" class="form-text-log">We'll never share your email with anyone else.</div>
                         </div>
                         <div class="mb-3">
-                            <label for="password" class="form-label">Password</label>
-                            <input type="password" class="textbox" id="password" required  value={password}
+                            <label for="password" class="form-label-log">Password</label>
+                            <input type="password" class="textbox-log" id="password" required  value={password}
                               onChange= {e => setPassword(e.target.value)} />
                         </div>
                         {/* <div class="mb-3 form-check">
@@ -82,13 +84,13 @@ const Login = () => {
                             <label class="form-check-label" for="rememberMe">Remember me</label>
                         </div> */}
                         <button type="submit" class="btn btn-primary w-100">Login</button>
-                        <div class="call-to-action">
+                        <div class="call-to-action-log">
                         {/* <button  type="submit" class="btn btn-danger w-20 mt-4 marginLeft: 80px"onClick={()=> updateRecord()} >SignUp</button> */}
-                        <button  type="submit" class="right-button" onClick={Signupfunction} >SignUp</button>
+                        <button  type="submit" class="right-button-log" onClick={Signupfunction} >SignUp</button>
                         </div>
                     </form>
                 </div>
-                <div class="card-footer text-center">
+                <div class="card-footer-log text-center">
                     <small>&copy; 2024 HRMS</small>
                 </div>
             </div>
