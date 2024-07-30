@@ -45,7 +45,7 @@ const SignUp = () => {
   return (
     <div class="px-4 py-5 px-md-3 text-center text-lg-start" style={{backgroundColor: "hsl(0, 0%, 96%)" }}>
     <div class="container-signup" >
-      <div class="row gx-lg-5 align-items-center" onSubmit={handleSubmit}>
+      <div class="row-signup gx-lg-5 align-items-center" onSubmit={handleSubmit}>
         <div class="col-lg-6 mb-5 mb-lg-0 " >
           <h3 class="my-7 display-5 fw-bold ls-tight" style={{ margin: '40px' }}>
             The HRM System <br />
@@ -102,7 +102,7 @@ const SignUp = () => {
                 </div>
 
 
-                <button type="submit" data-mdb-button-init data-mdb-ripple-init class="btn btn-primary btn-block mb-4">
+                <button type="submit" data-mdb-button-init data-mdb-ripple-init class="btn-signup btn-primary-signup btn-block mb-4">
                   Sign up
                 </button>
               </form>
