@@ -1,7 +1,7 @@
 import {React,useState} from 'react'
 import { useNavigate } from 'react-router-dom'
 import axiosInstance from '../context/AxiosInstance'
-import '../App.css'
+// import '../App.css'
 import './Login.css'
 
 
@@ -43,7 +43,7 @@ const SignUp = () => {
   };
 
   return (
-    <div class="px-4 py-5 px-md-3 text-center text-lg-start" style={{backgroundColor: "hsl(0, 0%, 96%)" }}>
+    <div class="bodyecs" style={{backgroundColor: "hsl(0, 0%, 96%)" }}>
     <div class="container-signup" >
       <div class="row-signup gx-lg-5 align-items-center" onSubmit={handleSubmit}>
         <div class="col-lg-6 mb-5 mb-lg-0 " >
