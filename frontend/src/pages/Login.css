@@ -1,19 +1,28 @@
 /* Container */
-.container-log {
+.container-signup {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh; /* Ensures the container takes the full viewport height */
+  }
+  
+  .row-signup {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Centers the items horizontally */
+    align-items: center; /* Centers the items vertically */
+    width: 100%;
+  }
+  
+  .cards-signup {
+    max-width: 500px; /* Adjust the max-width as needed */
+    width: 100%;
     display: flex;
     justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    /* background: linear-gradient(135deg, #f3ec78, #af4261); */
-    background: rgb(237, 184, 184);
-    padding: 20px;
-    width: 220vh;
-}
-
-/* Row */
-.row {
-    width: 100%;
-}
+  }
 
 /* Card */
 .cards-log {
@@ -21,6 +30,8 @@
     border-radius: 15px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     overflow: hidden;
+    margin-left: 200px;
+    justify-content: center;
 }
 
 /* Card Header */
@@ -151,7 +162,7 @@
 
 /* SignUp Page CSS */
 
-bodyecs {
+/* bodyecs {
     font-family: 'Roboto', sans-serif;
     background-color: #f8f9fa;
     margin: 0;
@@ -160,7 +171,7 @@ bodyecs {
     align-items: center;
     justify-content: center;
     height: 100vh;
-  }
+  } */
   
   .container-signup {
     max-width: 1200px;

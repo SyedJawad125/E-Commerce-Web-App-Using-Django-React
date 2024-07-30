@@ -24,7 +24,7 @@ const AddToCartPage = () => {
     };
 
     return (
-        <div className='container' style={{ marginTop: '15px', marginBottom: '100px', marginLeft: '200px' }}>
+        <div className='container' style={{ marginTop: '15px', marginBottom: '430px', marginLeft: '200px' }}>
             <div className="container mt-5">
                 <div className="row">
                     {cart.length > 0 ? cart.map(item => (

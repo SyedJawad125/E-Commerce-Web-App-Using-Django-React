@@ -12,15 +12,15 @@ import '../App.css'
 const Home = () => {
 
   return (
-    <div style={{ width: "100%", height: "100%" }}>
-      <div style={{ width: "100%", height: "100%" }}>
+    <div>
+      <div style={{ width: '218.5vh', height: "100%"  }}>
         <Banner_slider />
       </div>
       <div style={{ width: "100%", height: "100%", display: "flex", marginTop: '25px' }}>
         <div style={{ width: "20%", height: "100%" }}>
           <Category_vertical_slider />
         </div>
-        <div style={{ width: "80%", height: "100%" }}>
+        <div >
           <Category_slider />
         </div>
     </div>
