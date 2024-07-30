@@ -246,9 +246,9 @@
   
   .form-control-signup:focus ~ .form-label-signup,
   .form-control-signup:not(:placeholder-shown) ~ .form-label-signup {
-    top: -20px;
+    top: -30px;
     left: 0;
-    font-size: 0.75rem;
+    font-size: 1rem;
     color: #007bff;
   }
   
