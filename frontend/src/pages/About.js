@@ -8,7 +8,7 @@ import '../App.css'
 
 
 
-const Services = () => {
+const About = () => {
   
 
 
@@ -32,9 +32,9 @@ const Services = () => {
         <div class="row">
 
         <div class="col-md-3 mb-3">
-              <div class="card-about-service h-100">
-                <img src={img4} class="card-img-top-about-services" alt="Service 1" />
-                <div class="card-body-about-service">
+              <div class="card-about h-100">
+                <img src={img4} class="card-img-top-about" alt="Service 1" />
+                <div class="card-body-about">
                   <h2>John Doe</h2>
                   <p class="title">Designer</p>
                   <p>Some text that describes me lorem ipsum ipsum lorem.</p>
@@ -45,9 +45,9 @@ const Services = () => {
         </div>
             
             <div class="col-md-3 mb-3">
-              <div class="card-about-service h-100">
-                <img src={img5} class="card-img-top-about-services" style={{ height: '200px' }} alt="Service 1" />
-                <div class="card-body-about-service">
+              <div class="card-about h-100">
+                <img src={img5} class="card-img-top-about" style={{ height: '200px' }} alt="Service 1" />
+                <div class="card-body-about">
                   <h2>John Doe</h2>
                   <p class="title">Designer</p>
                   <p>Some text that describes me lorem ipsum ipsum lorem.</p>
@@ -58,9 +58,9 @@ const Services = () => {
             </div>
           
             <div class="col-md-3 mb-3">
-              <div class="card-about-service h-100">
-                <img src={img6} class="card-img-top-about-services" style={{ height: '200px' }}alt="Service 1" />
-                <div class="card-body-about-service">
+              <div class="card-about h-100">
+                <img src={img6} class="card-img-top-about" style={{ height: '200px' }}alt="Service 1" />
+                <div class="card-body-about">
                   <h2>John Doe</h2>
                   <p class="title">Designer</p>
                   <p>Some text that describes me lorem ipsum ipsum lorem.</p>
@@ -71,9 +71,9 @@ const Services = () => {
             </div>
 
             <div class="col-md-3 mb-3">
-              <div class="card-about-service h-100">
-                <img src={img6} class="card-img-top-about-services" style={{ height: '200px' }} alt="Service 1" />
-                <div class="card-body-about-service">
+              <div class="card-about h-100">
+                <img src={img6} class="card-img-top-about" style={{ height: '200px' }} alt="Service 1" />
+                <div class="card-body-about">
                   <h2>John Doe</h2>
                   <p class="title">Designer</p>
                   <p>Some text that describes me lorem ipsum ipsum lorem.</p>
@@ -90,4 +90,4 @@ const Services = () => {
   )
 }
 
-export default Services
+export default About
