@@ -83,10 +83,10 @@ const Login = () => {
                             <input type="checkbox" class="form-check-input" id="rememberMe" />
                             <label class="form-check-label" for="rememberMe">Remember me</label>
                         </div> */}
-                        <button type="submit" class="btn btn-primary w-100">Login</button>
-                        <div class="call-to-action-log">
+                        <button type="submit" class="btn-log btn-primary-log w-100">Login</button>
+                        <div class="call-to-action-logs">
                         {/* <button  type="submit" class="btn btn-danger w-20 mt-4 marginLeft: 80px"onClick={()=> updateRecord()} >SignUp</button> */}
-                        <button  type="submit" class="right-button-log" onClick={Signupfunction} >SignUp</button>
+                        <button  type="submit" class="right-button-logs" onClick={Signupfunction} >SignUp</button>
                         </div>
                     </form>
                 </div>

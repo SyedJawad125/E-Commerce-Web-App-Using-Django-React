@@ -70,7 +70,7 @@
 }
 
 /* Button */
-.btn {
+.btn-log {
     padding: 10px;
     border: none;
     border-radius: 5px;
@@ -78,17 +78,17 @@
     transition: background 0.3s;
 }
 
-.btn-primary {
-    background: #af4261;
+.btn-primary-log {
+    background: #007bff;
     color: white;
 }
 
-.btn-primary:hover {
-    background: #f3ec78;
-    color: #af4261;
+.btn-primary-log:hover {
+    background: #0e6bcef8;
+    /* color: #af4261; */
 }
 
-.btn-primary:active {
+.btn-primary-log:active {
     transform: scale(0.98);
 }
 
@@ -125,3 +125,28 @@
     padding: 10px;
     text-align: center;
 }
+
+.call-to-action-logs {
+    display: flex;
+    justify-content : flex-end;
+  }
+  
+  .right-button-logs {
+    padding: 8px 20px;
+    background-color: #e20b24;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 10px;
+  }
+  
+  .right-button-logs:hover {
+    background-color: #ab0b0b; /* Optional: Adds a hover effect */
+  }
+  
+
+
+/* SignUp Page CSS */
+
+
