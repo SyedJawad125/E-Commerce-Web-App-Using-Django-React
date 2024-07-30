@@ -6,8 +6,6 @@ import { faShoppingCart } from '@fortawesome/free-solid-svg-icons';
 import CartContext from '../context/CartContext';
 // import Tooltip from '../components/Tooltip'; 
 import HoverBox from './HoverBox';
-import img1 from '../images/1.jpg'
-import img2 from '../images/2.jpg'
 import '../App.css';
 
 const Navbar = () => {
@@ -34,8 +32,8 @@ const Navbar = () => {
   //   setShowTooltip(false);
   // };
   const sampleProducts = [
-    { id: 1, img1: '1.jpg', name: 'Product 1' },
-    { id: 2, img2: '2.jpg', name: 'Product 2' },
+    { id: 1, img1: '1.jpg', name: 'Leather Bag' },
+    { id: 2, img2: '2.jpg', name: 'Pent Coat' },
   ];
 
   return (
@@ -74,6 +72,22 @@ const Navbar = () => {
         >
           Categories
         </Link>
+
+        <div
+          className="navbar-check"
+          onMouseEnter={() => setHovering(true)}
+          onMouseLeave={() => setHovering(false)}
+          style={{ position: 'relative' }}>
+          <Link
+            to="/new_arrival"
+            className={activeLink === '/new_arrival' ? 'active' : ''}
+            onClick={() => handleLinkClick('/new_arrival')}>
+            New In
+          </Link>
+          
+          {hovering && <HoverBox products={sampleProducts} />} 
+        </div>
+
         <Link
           to="/allpublicproducts"
           className={activeLink === '/allpublicproducts' ? 'active' : ''}
@@ -96,22 +110,6 @@ const Navbar = () => {
           Contact
         </Link>
         
-        <div
-          className="navbar-check"
-          onMouseEnter={() => setHovering(true)}
-          onMouseLeave={() => setHovering(false)}
-          style={{ position: 'relative' }}
-        >
-          <Link
-            to="/allpublicproducts"
-            className={activeLink === '/allpublicproducts' ? 'active' : ''}
-            onClick={() => handleLinkClick('/allpublicproducts')}
-          >
-            CheckBox
-          </Link>
-          
-          {hovering && <HoverBox products={sampleProducts} />} 
-        </div>
 
         <div className="navbar-cart">
         <Link to="/addtocartpage"  className={activeLink === '/addtocartpage' ? 'active' : ''}
@@ -126,7 +124,6 @@ const Navbar = () => {
 };
 
 export default Navbar;
-
 
 
 

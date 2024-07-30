@@ -1,6 +1,7 @@
 import React from 'react';
-import img1 from '../images/1.jpg';
-import img2 from '../images/2.jpg';
+import { Link } from 'react-router-dom';
+import img1 from '../images/Ladies_bags1.jpg';
+import img2 from '../images/3piece1.webp';
 
 const HoverBox = ({ products }) => {
   return (
@@ -17,14 +18,16 @@ const HoverBox = ({ products }) => {
         marginTop: '5px'
       }}
     >
-      <div style={{ display: 'flex', flexDirection: 'row', gap: '10px' }}>
+      <div style={{ display: 'flex', flexDirection: 'row', gap: '5px' }}>
         {products.map(product => (
           <div key={product.id} style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-            <img 
-              src={product.img1 === '1.jpg' ? img1 : img2} 
-              alt={product.name} 
-              style={{ width: '100px', height: '100px', marginBottom: '5px' }} 
-            />
+            <Link to={`/new_arrival`}>
+              <img 
+                src={product.img1 === '1.jpg' ? img1 : img2} 
+                alt={product.name} 
+                style={{ width: '200px', height: '175px', marginBottom: '5px' }} 
+              />
+            </Link>
             <span>{product.name}</span>
           </div>
         ))}
