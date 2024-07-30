@@ -3,8 +3,8 @@ import img4 from '../images/4.jpg'
 import img5 from '../images/5.jpg'
 import img6 from '../images/6.jpg'
 import Product_vertical_slider from './Category_vertical_slider';
-import Readmore from './Readmore';
 import './About_Services_CSS.css';
+import '../App.css'
 
 
 
@@ -31,9 +31,9 @@ const Services = () => {
         <h1 class="text-center mb-4">Our Team</h1>
         <div class="row">
 
-          <div class="col-md-3 mb-3">
+        <div class="col-md-3 mb-3">
               <div class="card-about-service h-100">
-                <img src={img4} class="card-img-top-about-services" style={{ height: '200px' }} alt="Service 1" />
+                <img src={img4} class="card-img-top-about-services" alt="Service 1" />
                 <div class="card-body-about-service">
                   <h2>John Doe</h2>
                   <p class="title">Designer</p>
@@ -42,7 +42,7 @@ const Services = () => {
                   <p><button class="button">Contact</button></p>
                 </div>
               </div>
-          </div>
+        </div>
             
             <div class="col-md-3 mb-3">
               <div class="card-about-service h-100">
