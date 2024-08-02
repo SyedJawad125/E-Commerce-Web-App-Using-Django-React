@@ -55,7 +55,7 @@ const Category_vertical_slider = () => {
       };
 
     return (
-        <div className="vertical-slider-container">
+        <div className="vertical-slider-container" style={{ marginBottom: '100px' }}>
             <h2 className="mt-4">Categories </h2>
             <div className="slider-wrapper-verticle">
                 <Slider {...settings}>

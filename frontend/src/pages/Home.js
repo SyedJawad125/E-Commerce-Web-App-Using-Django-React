@@ -12,7 +12,25 @@ import '../App.css'
 const Home = () => {
 
   return (
-    <div>
+    <div className="home-container">
+      <div className="banner-slider">
+        <Banner_slider />
+      </div>
+      <div className="content-wrapper">
+        <div className="left-side">
+          <Category_vertical_slider />
+        </div>
+        <div className="main-content">
+          <Category_slider />
+        </div>
+      </div>
+    </div>
+  )
+}
+      
+export default Home
+
+{/* <div>
       <div style={{ width: '218.5vh', height: "100%"  }}>
         <Banner_slider />
       </div>
@@ -24,11 +42,15 @@ const Home = () => {
           <Category_slider />
         </div>
     </div>
-    </div>
-  )
-}
-      
-export default Home
+</div> */}
+
+
+
+
+
+
+
+
 
 {/* <div style={{
 width:"100%".

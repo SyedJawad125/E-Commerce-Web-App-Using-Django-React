@@ -1309,6 +1309,34 @@ body {
 
 
 
+.home-container {
+  width: 100%;
+}
+
+.banner-slider {
+  width: 100%;
+  height: auto; /* Adjust as needed */
+}
+
+.content-wrapper {
+  display: flex;
+  width: 100%;
+  height: calc(100vh - [banner-height] - [footer-height]); /* Adjust according to your banner and footer height */
+}
+
+.left-side {
+  flex: 0 0 15%;
+  height: 100%;
+  overflow-y: auto; /* To ensure the vertical slider scrolls */
+  background-color: #f0f0f0; /* Light grey background */
+}
+
+.main-content {
+  flex: 1;
+  height: 100%;
+  background-color: #ffffff; /* White background */
+  overflow-y: auto; /* Ensure main content is scrollable if needed */
+}
 
 
 

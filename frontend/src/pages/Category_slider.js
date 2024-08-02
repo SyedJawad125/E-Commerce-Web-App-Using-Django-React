@@ -53,7 +53,7 @@ const Category_slider = () => {
       };
       
     return (
-        <div className="container" style={{ marginBottom: '100px' ,  marginLeft: '200px'}}>
+        <div className="container" style={{ marginBottom: '100px' }}>
             <h3 className="mt-4">Categories </h3>
             {/* <Link type="submit" className="btn btn-primary mt-3" to="/Add/Addcategory">
                 Add Category
