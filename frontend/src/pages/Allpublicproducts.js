@@ -75,16 +75,6 @@ export default Allpublicproducts;
 
 
 
-
-
-
-
-
-
-
-
-
-
 // import {React, useEffect, useState} from 'react'
 // import {Link, useNavigate, useLocation} from 'react-router-dom'
 // import { useParams } from 'react-router-dom';

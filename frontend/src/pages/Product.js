@@ -14,12 +14,7 @@ const Product = () => {
     const [data, setData] = useState([])
     const [flag, setFlag] = useState(false)
 
-    const [search, setSearch] = useState('');
-    const [searchTerm, setSearchTerm] = useState('');
-    const [isLoading, setIsLoading] = useState(false); // Track loading state
-    const [searchResults, setSearchResults] = useState([]); // Store search results
-
-    const debounceTimeout = useRef(null); // useRef for timeout
+   
     // const location = useLocation();
     // const { message } = location.state || { message: { name: '', text: '' } };
 
@@ -66,13 +61,6 @@ const Product = () => {
     const updateRecord = async (item) => {
     navigate('/Update/Updateproduct', {state: {data: item}})
 }
-
-
-  // Clear timeout on unmount to prevent memory leaks
-  useEffect(() => {
-    return () => clearTimeout(debounceTimeout.current);
-  }, []);
-
   return (
     <div class='container'  style={{ marginLeft: '200px' }} >
     <h2 class='mt-4'>List Of Products </h2>
