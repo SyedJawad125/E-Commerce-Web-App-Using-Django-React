@@ -3,7 +3,7 @@ import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import Banner_slider from './Banner_slider'
 import Category_slider from './Category_slider';
-import Category_vertical_slider from './Category_vertical_slider';
+// import Category_vertical_slider from './Category_vertical_slider';
 // import Footer from './components/Footer';
 import '../App.css'
 
@@ -18,7 +18,7 @@ const Home = () => {
       </div>
       <div className="content-wrapper">
         <div className="left-side">
-          <Category_vertical_slider />
+          {/* <Category_vertical_slider /> */}
         </div>
         <div className="main-content">
           <Category_slider />
