@@ -1,5 +1,5 @@
 import React, { useState, useContext } from 'react';
-import { Link, useLocation, useNavigate } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import logo from '../images/logo5.jpg';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faShoppingCart } from '@fortawesome/free-solid-svg-icons';  
@@ -10,7 +10,7 @@ import '../App.css';
 
 const Navbar = () => {
   const location = useLocation();
-  const navigate = useNavigate();
+
   const [activeLink, setActiveLink] = useState(location.pathname);
   const { cart } = useContext(CartContext);
   // const [showTooltip, setShowTooltip] = useState(false); 
