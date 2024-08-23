@@ -20,9 +20,9 @@ const Navbar = () => {
     setActiveLink(path);
   };
 
-  const handleClick = () => {
-    navigate('/addtocartpage');
-  };
+  // const handleClick = () => {
+  //   navigate('/addtocartpage');
+  // };
 
   // const handleMouseEnter = () => {
   //   setShowTooltip(true);
@@ -95,13 +95,13 @@ const Navbar = () => {
         >
           Products
         </Link>
-        <Link
+        {/* <Link
           to="/product_vertical_slider"
           className={activeLink === '/product_vertical_slider' ? 'active' : ''}
           onClick={() => handleLinkClick('/product_vertical_slider')}
         >
           prod_vert_slider
-        </Link>
+        </Link> */}
         <Link
           to="/contact"
           className={activeLink === '/contact' ? 'active' : ''}

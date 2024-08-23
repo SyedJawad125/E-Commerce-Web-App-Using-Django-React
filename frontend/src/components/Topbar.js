@@ -30,7 +30,7 @@ const Topbar = () => {
                 </div>
                   {
               localStorage.getItem('token') ? <Link onClick={logout} className="logout-lpg">
-                Sign Out</Link> : <Link to="/login">
+                Logout</Link> : <Link to="/login">
                 <div className="icon-box d-flex align-items-center mx-2">
                     <span><FontAwesomeIcon icon={faSignInAlt} className="mr-2" />
                     Login</span>

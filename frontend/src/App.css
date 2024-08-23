@@ -227,9 +227,8 @@ input[type=submit]:hover {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #06BD46 ;
+  background-color: #06BD46;
   padding: 1px;
-  /* #e50a0a */
 }
 
 .navbar a {
@@ -237,10 +236,10 @@ input[type=submit]:hover {
   padding: 8px 18px;
   text-decoration: none;
   text-align: center;
+  margin: 0 10px; /* Add horizontal margin to create the gap */
 }
 
 .navbar a:hover {
-  /* background-color: #ddd; */
   color: rgb(26, 30, 26);
 }
 
@@ -254,6 +253,7 @@ input[type=submit]:hover {
   align-items: center;
   margin-right: 3rem;
 }
+
 .navbar-links a.active {
   color: black; /* Change to your desired color */
   font-weight: lighter; /* Optional: make the text bold */
@@ -325,7 +325,7 @@ input[type=submit]:hover {
 .cart-count {
   position: absolute;
   top: -10px;
-  right: -10px;
+  right: 0px;
   background-color: red;
   color: white;
   border-radius: 50%;
