@@ -1,28 +1,34 @@
-import {React, useContext} from 'react'
-import {Link} from 'react-router-dom'
-import { AuthCon } from '../context/AuthContext'
-import '../App.css'
+import React from 'react';
+import { Link, useNavigate } from 'react-router-dom';
+import '../App.css';
 
-const Admin_navbar = () => {
-    const {logout} = useContext(AuthCon)
+const AdminNavbar = () => {
+  const navigate = useNavigate();
+
+  const logout = () => {
+    localStorage.removeItem('token');
+    navigate('/login');
+  };
+
   return (
-    <div class="sidenav">
-        <Link to="/adminpage">Adminpage</Link>
-        {/* <Link to="/about">About</Link> */}
-        {/* <Link to="/services">Services</Link> */}
-        <Link to="/product">AdminProducts</Link>
-        <Link to="/category">AdminCategories</Link>
-        <Link to="/">Public Site</Link>
-        {
-            localStorage.getItem('token') ? <Link onClick={logout}>Logout</Link> : <Link to="/login">Login</Link>
-        }
-
-      <div class="main">
-          <h2>Admin Page</h2>
-          <p>This page is only used for Admin of the Site.</p>
+    <div className="sidenav">
+      <Link to="/adminpage">Admin Page</Link>
+      <Link to="/product">Admin Products</Link>
+      <Link to="/category">Admin Categories</Link>
+      <Link to="/">Public Site</Link>
+      {localStorage.getItem('token') ? (
+        <button onClick={logout} className="logout-button">
+          Logout
+        </button>
+      ) : (
+        <Link to="/login">Login</Link>
+      )}
+      <div className="main">
+        <h2>Admin Page</h2>
+        <p>This page is only used for the Admin of the Site.</p>
       </div>
-  </div>
-  )
-}
+    </div>
+  );
+};
 
-export default Admin_navbar
+export default AdminNavbar;

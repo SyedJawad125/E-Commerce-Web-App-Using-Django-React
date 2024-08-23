@@ -1339,4 +1339,16 @@ body {
 }
 
 
+.logout-button {
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  font-size: inherit;
+  margin-left: 10px;
+}
+
+.logout-button:hover {
+  color:white;
+}
 
