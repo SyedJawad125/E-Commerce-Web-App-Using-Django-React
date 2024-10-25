@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import { Routes, Route, useLocation } from 'react-router-dom';
 import { CartProvider } from './context/CartContext';
 import Navbar from './components/Navbar';
@@ -33,7 +33,13 @@ import 'react-toastify/dist/ReactToastify.css';
 import Checkout from './pages/Checkout';
 import New_Arrival from './pages/New_Arrival';
 
+import { LoginSocialFacebook, LoginSocialGoogle } from 'reactjs-social-login';
+import { FacebookLoginButton, GoogleLoginButton } from 'react-social-login-buttons';
+
 function App() {
+
+  const [profile, setProfile] = useState(null)
+
   const location = useLocation();
   const adminRoutes = [
     '/login', '/SignUp', '/product', '/Add/Addproduct', '/Update/Updateproduct', '/category',
@@ -56,6 +62,31 @@ function App() {
             {!adminRoutes.includes(location.pathname) && <CardSlider />}
 
         </div> */}
+
+{!profile ?
+
+<div>
+    <LoginSocialGoogle
+    client_id='879113945041-3720vpmfo0c3tkhme4nceiijbb8fspbm.apps.googleusercontent.com'
+    redirect_uri='https://accounts.google.com/o/oauth2/v2/auth'
+    onResolve={(response)=>{
+      setProfile(response.data)
+      console.log(response)
+    }}
+    onReject={(error)=>{
+      console.log(error)
+    }}
+    >
+    <GoogleLoginButton/>
+    </LoginSocialGoogle>  
+</div>: ""}
+
+{profile ? 
+    <div> 
+      <h1>{profile.name}</h1>
+      <img src={profile.picture} alt={profile.name}/>
+    </div>  : "" }
+
 
         <Routes>
           <Route path='/login' element={<Login />} />
